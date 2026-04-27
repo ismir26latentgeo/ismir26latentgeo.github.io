@@ -1,46 +1,91 @@
 example_id,example_key,folder,label,relative_wav_path,lsd,sispec,si_sdr
 0,bwe_0,ground_truth,GT,ground_truth/bwe_0_GT.wav,,,
 0,bwe_0,degraded,Degraded,degraded/bwe_0_Degraded.wav,5.586267948150635,16.70918083190918,16.696775436401367
-0,bwe_0,audiosr,AudioSR,audiosr/bwe_0_AudioSR.wav,2.2212975025177,13.016685485839844,9.572243690490723
-0,bwe_0,cqtdiff,CQTDiff,cqtdiff/bwe_0_CQTDiff.wav,3.295947790145874,15.112468719482422,-16.396642684936523
-0,bwe_0,IBAR,IBAR,IBAR/bwe_0_IBAR.wav,1.8421211242675781,6.855706691741943,-32.1743049621582
+0,bwe_0,audiosr,AudioSR,audiosr/bwe_0_AudioSR.wav,2.2212975025177,13.01668643951416,9.572243690490723
+0,bwe_0,cqtdiff,CQTDiff,cqtdiff/bwe_0_CQTDiff.wav,3.295947790145874,15.112468719482422,-16.396644592285156
+0,bwe_0,IBAR,IBAR,IBAR/bwe_0_IBAR.wav,1.8421211242675781,6.855706691741943,-32.17430877685547
 0,bwe_0,A2SB,A2SB (4-split),A2SB/bwe_0_A2SB_4split.wav,1.6115697622299194,18.370452880859375,14.809574127197266
-0,bwe_0,mean_shift,Mean Shift,mean_shift/bwe_0_mean_shift.wav,1.8652464151382446,12.999942779541016,9.979141235351562
-0,bwe_0,mean_shift,Local Mean,mean_shift/bwe_0_local_mean.wav,2.0011487007141113,12.955286026000977,9.973068237304688
-0,bwe_0,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_0_local_mean_clean_lowband.wav,1.9594981670379639,17.6148738861084,16.63377571105957
+0,bwe_0,mean_shift,Mean Shift,mean_shift/bwe_0_mean_shift.wav,1.7821152210235596,13.213174819946289,9.690119743347168
+0,bwe_0,mean_shift,Local Mean,mean_shift/bwe_0_local_mean.wav,1.6363492012023926,13.282279968261719,9.619987487792969
+0,bwe_0,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_0_local_mean_clean_lowband.wav,1.5819666385650635,18.42153549194336,15.440689086914062
+0,bwe_0,codicodec_transport,Mean Shift (CodiCodec),codicodec_transport/bwe_0_mean_shift.wav,2.5114378929138184,7.996445178985596,3.857530117034912
+0,bwe_0,codicodec_transport,Local Mean (CodiCodec),codicodec_transport/bwe_0_local_mean.wav,2.270608425140381,8.015477180480957,3.8247885704040527
+0,bwe_0,codicodec_transport,Local Mean with Clean Lowband (CodiCodec),codicodec_transport/bwe_0_local_mean_clean_lowband.wav,2.219475269317627,18.201927185058594,15.95389175415039
+0,bwe_0,dac_transport,Mean Shift (DAC),dac_transport/bwe_0_mean_shift.wav,2.8889548778533936,13.688554763793945,11.907567977905273
+0,bwe_0,dac_transport,Local Mean (DAC),dac_transport/bwe_0_local_mean.wav,2.6349220275878906,13.703960418701172,11.93755054473877
+0,bwe_0,dac_transport,Local Mean with Clean Lowband (DAC),dac_transport/bwe_0_local_mean_clean_lowband.wav,2.60237717628479,17.952831268310547,16.463743209838867
+0,bwe_0,encodec_transport,Mean Shift (Encodec),encodec_transport/bwe_0_mean_shift.wav,2.2871737480163574,15.564760208129883,13.932843208312988
+0,bwe_0,encodec_transport,Local Mean (Encodec),encodec_transport/bwe_0_local_mean.wav,2.3987059593200684,15.294168472290039,13.822369575500488
+0,bwe_0,encodec_transport,Local Mean with Clean Lowband (Encodec),encodec_transport/bwe_0_local_mean_clean_lowband.wav,2.364290237426758,17.544572830200195,16.77275276184082
 1,bwe_1,ground_truth,GT,ground_truth/bwe_1_GT.wav,,,
 1,bwe_1,degraded,Degraded,degraded/bwe_1_Degraded.wav,4.167448043823242,20.20168113708496,20.191463470458984
 1,bwe_1,audiosr,AudioSR,audiosr/bwe_1_AudioSR.wav,1.953150987625122,10.578056335449219,9.071358680725098
-1,bwe_1,cqtdiff,CQTDiff,cqtdiff/bwe_1_CQTDiff.wav,2.1079633235931396,13.702579498291016,-16.633216857910156
-1,bwe_1,IBAR,IBAR,IBAR/bwe_1_IBAR.wav,1.7018990516662598,2.0783166885375977,-34.45365524291992
+1,bwe_1,cqtdiff,CQTDiff,cqtdiff/bwe_1_CQTDiff.wav,2.1079633235931396,13.7025785446167,-16.633216857910156
+1,bwe_1,IBAR,IBAR,IBAR/bwe_1_IBAR.wav,1.7018990516662598,2.0783166885375977,-34.45365905761719
 1,bwe_1,A2SB,A2SB (4-split),A2SB/bwe_1_A2SB_4split.wav,1.8320711851119995,21.151809692382812,17.89278793334961
-1,bwe_1,mean_shift,Mean Shift,mean_shift/bwe_1_mean_shift.wav,1.9976872205734253,17.592967987060547,14.977689743041992
-1,bwe_1,mean_shift,Local Mean,mean_shift/bwe_1_local_mean.wav,2.1121745109558105,17.572235107421875,15.07530689239502
-1,bwe_1,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_1_local_mean_clean_lowband.wav,2.078880548477173,20.79279136657715,20.161277770996094
+1,bwe_1,mean_shift,Mean Shift,mean_shift/bwe_1_mean_shift.wav,1.5131529569625854,17.820964813232422,14.797887802124023
+1,bwe_1,mean_shift,Local Mean,mean_shift/bwe_1_local_mean.wav,1.4950605630874634,17.81926155090332,14.721702575683594
+1,bwe_1,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_1_local_mean_clean_lowband.wav,1.4469043016433716,21.67584991455078,19.710702896118164
+1,bwe_1,codicodec_transport,Mean Shift (CodiCodec),codicodec_transport/bwe_1_mean_shift.wav,1.4370856285095215,11.954878807067871,8.066941261291504
+1,bwe_1,codicodec_transport,Local Mean (CodiCodec),codicodec_transport/bwe_1_local_mean.wav,1.3845703601837158,11.537958145141602,7.868711948394775
+1,bwe_1,codicodec_transport,Local Mean with Clean Lowband (CodiCodec),codicodec_transport/bwe_1_local_mean_clean_lowband.wav,1.319252848625183,21.815399169921875,19.25949478149414
+1,bwe_1,dac_transport,Mean Shift (DAC),dac_transport/bwe_1_mean_shift.wav,1.5034433603286743,17.373598098754883,15.343340873718262
+1,bwe_1,dac_transport,Local Mean (DAC),dac_transport/bwe_1_local_mean.wav,1.5293753147125244,17.492563247680664,15.475188255310059
+1,bwe_1,dac_transport,Local Mean with Clean Lowband (DAC),dac_transport/bwe_1_local_mean_clean_lowband.wav,1.4896857738494873,21.605737686157227,19.7894287109375
+1,bwe_1,encodec_transport,Mean Shift (Encodec),encodec_transport/bwe_1_mean_shift.wav,1.711679458618164,19.945491790771484,17.989925384521484
+1,bwe_1,encodec_transport,Local Mean (Encodec),encodec_transport/bwe_1_local_mean.wav,1.7410368919372559,19.645462036132812,18.070587158203125
+1,bwe_1,encodec_transport,Local Mean with Clean Lowband (Encodec),encodec_transport/bwe_1_local_mean_clean_lowband.wav,1.708046793937683,21.213380813598633,20.099334716796875
 2,bwe_2,ground_truth,GT,ground_truth/bwe_2_GT.wav,,,
 2,bwe_2,degraded,Degraded,degraded/bwe_2_Degraded.wav,2.5836246013641357,29.339502334594727,29.32499885559082
 2,bwe_2,audiosr,AudioSR,audiosr/bwe_2_AudioSR.wav,1.537705421447754,23.54337501525879,20.746051788330078
 2,bwe_2,cqtdiff,CQTDiff,cqtdiff/bwe_2_CQTDiff.wav,1.692931056022644,16.57894515991211,-10.64554214477539
-2,bwe_2,IBAR,IBAR,IBAR/bwe_2_IBAR.wav,1.3243892192840576,10.425464630126953,-19.17513084411621
+2,bwe_2,IBAR,IBAR,IBAR/bwe_2_IBAR.wav,1.3243892192840576,10.425466537475586,-19.17513084411621
 2,bwe_2,A2SB,A2SB (4-split),A2SB/bwe_2_A2SB_4split.wav,1.2507988214492798,30.285966873168945,28.779489517211914
 2,bwe_2,mean_shift,Mean Shift,mean_shift/bwe_2_mean_shift.wav,1.036573052406311,13.40914535522461,9.457274436950684
-2,bwe_2,mean_shift,Local Mean,mean_shift/bwe_2_local_mean.wav,0.9365177750587463,13.43901252746582,9.52311897277832
-2,bwe_2,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_2_local_mean_clean_lowband.wav,0.84090256690979,30.612403869628906,29.27505874633789
+2,bwe_2,mean_shift,Local Mean,mean_shift/bwe_2_local_mean.wav,0.9365177750587463,13.439014434814453,9.52311897277832
+2,bwe_2,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_2_local_mean_clean_lowband.wav,0.84090256690979,30.612403869628906,29.275056838989258
+2,bwe_2,codicodec_transport,Mean Shift (CodiCodec),codicodec_transport/bwe_2_mean_shift.wav,0.9632961750030518,10.756731033325195,6.383826732635498
+2,bwe_2,codicodec_transport,Local Mean (CodiCodec),codicodec_transport/bwe_2_local_mean.wav,1.0648174285888672,10.450844764709473,6.201382160186768
+2,bwe_2,codicodec_transport,Local Mean with Clean Lowband (CodiCodec),codicodec_transport/bwe_2_local_mean_clean_lowband.wav,0.9741288423538208,30.028438568115234,29.717321395874023
+2,bwe_2,dac_transport,Mean Shift (DAC),dac_transport/bwe_2_mean_shift.wav,0.958462655544281,14.687707901000977,12.309009552001953
+2,bwe_2,dac_transport,Local Mean (DAC),dac_transport/bwe_2_local_mean.wav,1.0649479627609253,15.013700485229492,12.613239288330078
+2,bwe_2,dac_transport,Local Mean with Clean Lowband (DAC),dac_transport/bwe_2_local_mean_clean_lowband.wav,0.9862362742424011,30.07946014404297,29.69587516784668
+2,bwe_2,encodec_transport,Mean Shift (Encodec),encodec_transport/bwe_2_mean_shift.wav,1.8091349601745605,19.56818199157715,16.935739517211914
+2,bwe_2,encodec_transport,Local Mean (Encodec),encodec_transport/bwe_2_local_mean.wav,1.669049859046936,19.949913024902344,17.274799346923828
+2,bwe_2,encodec_transport,Local Mean with Clean Lowband (Encodec),encodec_transport/bwe_2_local_mean_clean_lowband.wav,1.6286824941635132,30.506183624267578,29.433042526245117
 4,bwe_4,ground_truth,GT,ground_truth/bwe_4_GT.wav,,,
 4,bwe_4,degraded,Degraded,degraded/bwe_4_Degraded.wav,3.063385486602783,32.69206619262695,32.671119689941406
 4,bwe_4,audiosr,AudioSR,audiosr/bwe_4_AudioSR.wav,1.8667975664138794,17.868362426757812,16.45169448852539
-4,bwe_4,cqtdiff,CQTDiff,cqtdiff/bwe_4_CQTDiff.wav,1.6922070980072021,20.276569366455078,-33.712913513183594
-4,bwe_4,IBAR,IBAR,IBAR/bwe_4_IBAR.wav,1.4587959051132202,7.693471908569336,-24.37045669555664
+4,bwe_4,cqtdiff,CQTDiff,cqtdiff/bwe_4_CQTDiff.wav,1.6922070980072021,20.276569366455078,-33.712921142578125
+4,bwe_4,IBAR,IBAR,IBAR/bwe_4_IBAR.wav,1.4587959051132202,7.693473815917969,-24.37045669555664
 4,bwe_4,A2SB,A2SB (4-split),A2SB/bwe_4_A2SB_4split.wav,1.4850795269012451,33.56126403808594,32.37857437133789
-4,bwe_4,mean_shift,Mean Shift,mean_shift/bwe_4_mean_shift.wav,1.1362371444702148,16.05834197998047,12.890137672424316
-4,bwe_4,mean_shift,Local Mean,mean_shift/bwe_4_local_mean.wav,1.034232497215271,16.148679733276367,12.94498062133789
-4,bwe_4,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_4_local_mean_clean_lowband.wav,0.9586771726608276,33.675716400146484,31.15005111694336
+4,bwe_4,mean_shift,Mean Shift,mean_shift/bwe_4_mean_shift.wav,1.745792031288147,15.827409744262695,12.635197639465332
+4,bwe_4,mean_shift,Local Mean,mean_shift/bwe_4_local_mean.wav,1.7649133205413818,15.944509506225586,12.685636520385742
+4,bwe_4,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_4_local_mean_clean_lowband.wav,1.716446876525879,24.798995971679688,23.578933715820312
+4,bwe_4,codicodec_transport,Mean Shift (CodiCodec),codicodec_transport/bwe_4_mean_shift.wav,1.6229296922683716,12.347053527832031,8.363760948181152
+4,bwe_4,codicodec_transport,Local Mean (CodiCodec),codicodec_transport/bwe_4_local_mean.wav,1.6044516563415527,11.891502380371094,7.948245525360107
+4,bwe_4,codicodec_transport,Local Mean with Clean Lowband (CodiCodec),codicodec_transport/bwe_4_local_mean_clean_lowband.wav,1.5549566745758057,24.70929718017578,23.768835067749023
+4,bwe_4,dac_transport,Mean Shift (DAC),dac_transport/bwe_4_mean_shift.wav,1.8612041473388672,15.858448028564453,14.014729499816895
+4,bwe_4,dac_transport,Local Mean (DAC),dac_transport/bwe_4_local_mean.wav,1.8493778705596924,15.658758163452148,13.953784942626953
+4,bwe_4,dac_transport,Local Mean with Clean Lowband (DAC),dac_transport/bwe_4_local_mean_clean_lowband.wav,1.8133493661880493,30.178035736083984,28.68311309814453
+4,bwe_4,encodec_transport,Mean Shift (Encodec),encodec_transport/bwe_4_mean_shift.wav,1.922642707824707,19.786123275756836,17.5673885345459
+4,bwe_4,encodec_transport,Local Mean (Encodec),encodec_transport/bwe_4_local_mean.wav,1.7978359460830688,19.888063430786133,17.62371826171875
+4,bwe_4,encodec_transport,Local Mean with Clean Lowband (Encodec),encodec_transport/bwe_4_local_mean_clean_lowband.wav,1.7603179216384888,32.343650817871094,31.03030776977539
 5,bwe_5,ground_truth,GT,ground_truth/bwe_5_GT.wav,,,
 5,bwe_5,degraded,Degraded,degraded/bwe_5_Degraded.wav,2.075183153152466,29.773290634155273,29.74330711364746
 5,bwe_5,audiosr,AudioSR,audiosr/bwe_5_AudioSR.wav,1.899301528930664,22.11094856262207,18.513519287109375
-5,bwe_5,cqtdiff,CQTDiff,cqtdiff/bwe_5_CQTDiff.wav,1.39926278591156,19.942338943481445,-10.273165702819824
-5,bwe_5,IBAR,IBAR,IBAR/bwe_5_IBAR.wav,1.1657055616378784,11.467823028564453,-50.76101303100586
+5,bwe_5,cqtdiff,CQTDiff,cqtdiff/bwe_5_CQTDiff.wav,1.39926278591156,19.942340850830078,-10.273164749145508
+5,bwe_5,IBAR,IBAR,IBAR/bwe_5_IBAR.wav,1.1657055616378784,11.467823028564453,-50.761009216308594
 5,bwe_5,A2SB,A2SB (4-split),A2SB/bwe_5_A2SB_4split.wav,1.594751000404358,28.5256404876709,27.639591217041016
-5,bwe_5,mean_shift,Mean Shift,mean_shift/bwe_5_mean_shift.wav,1.0822746753692627,14.532001495361328,10.807472229003906
-5,bwe_5,mean_shift,Local Mean,mean_shift/bwe_5_local_mean.wav,1.0542677640914917,14.670303344726562,10.978500366210938
-5,bwe_5,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_5_local_mean_clean_lowband.wav,0.9776952266693115,31.596115112304688,29.460628509521484
+5,bwe_5,mean_shift,Mean Shift,mean_shift/bwe_5_mean_shift.wav,1.0822746753692627,14.532001495361328,10.807474136352539
+5,bwe_5,mean_shift,Local Mean,mean_shift/bwe_5_local_mean.wav,1.0542677640914917,14.670303344726562,10.978499412536621
+5,bwe_5,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_5_local_mean_clean_lowband.wav,0.9776952266693115,31.59611701965332,29.460628509521484
+5,bwe_5,codicodec_transport,Mean Shift (CodiCodec),codicodec_transport/bwe_5_mean_shift.wav,1.0611741542816162,9.961787223815918,5.866231441497803
+5,bwe_5,codicodec_transport,Local Mean (CodiCodec),codicodec_transport/bwe_5_local_mean.wav,1.0466948747634888,10.287827491760254,6.293213367462158
+5,bwe_5,codicodec_transport,Local Mean with Clean Lowband (CodiCodec),codicodec_transport/bwe_5_local_mean_clean_lowband.wav,0.9584558010101318,31.139833450317383,29.92396354675293
+5,bwe_5,dac_transport,Mean Shift (DAC),dac_transport/bwe_5_mean_shift.wav,1.1898353099822998,14.506014823913574,12.476545333862305
+5,bwe_5,dac_transport,Local Mean (DAC),dac_transport/bwe_5_local_mean.wav,1.080562710762024,14.859856605529785,12.782571792602539
+5,bwe_5,dac_transport,Local Mean with Clean Lowband (DAC),dac_transport/bwe_5_local_mean_clean_lowband.wav,1.0192278623580933,31.379899978637695,29.74915313720703
+5,bwe_5,encodec_transport,Mean Shift (Encodec),encodec_transport/bwe_5_mean_shift.wav,1.4820525646209717,18.863746643066406,16.457748413085938
+5,bwe_5,encodec_transport,Local Mean (Encodec),encodec_transport/bwe_5_local_mean.wav,1.3581351041793823,19.24779510498047,16.847034454345703
+5,bwe_5,encodec_transport,Local Mean with Clean Lowband (Encodec),encodec_transport/bwe_5_local_mean_clean_lowband.wav,1.3182517290115356,31.960567474365234,29.547752380371094

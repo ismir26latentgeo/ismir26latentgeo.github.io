@@ -27,7 +27,7 @@
       "label": "AudioSR",
       "relative_wav_path": "audiosr/bwe_0_AudioSR.wav",
       "lsd": 2.2212975025177,
-      "sispec": 13.016685485839844,
+      "sispec": 13.01668643951416,
       "si_sdr": 9.572243690490723
     },
     {
@@ -38,7 +38,7 @@
       "relative_wav_path": "cqtdiff/bwe_0_CQTDiff.wav",
       "lsd": 3.295947790145874,
       "sispec": 15.112468719482422,
-      "si_sdr": -16.396642684936523
+      "si_sdr": -16.396644592285156
     },
     {
       "example_id": "0",
@@ -48,7 +48,7 @@
       "relative_wav_path": "IBAR/bwe_0_IBAR.wav",
       "lsd": 1.8421211242675781,
       "sispec": 6.855706691741943,
-      "si_sdr": -32.1743049621582
+      "si_sdr": -32.17430877685547
     },
     {
       "example_id": "0",
@@ -66,9 +66,9 @@
       "folder": "mean_shift",
       "label": "Mean Shift",
       "relative_wav_path": "mean_shift/bwe_0_mean_shift.wav",
-      "lsd": 1.8652464151382446,
-      "sispec": 12.999942779541016,
-      "si_sdr": 9.979141235351562
+      "lsd": 1.7821152210235596,
+      "sispec": 13.213174819946289,
+      "si_sdr": 9.690119743347168
     },
     {
       "example_id": "0",
@@ -76,9 +76,9 @@
       "folder": "mean_shift",
       "label": "Local Mean",
       "relative_wav_path": "mean_shift/bwe_0_local_mean.wav",
-      "lsd": 2.0011487007141113,
-      "sispec": 12.955286026000977,
-      "si_sdr": 9.973068237304688
+      "lsd": 1.6363492012023926,
+      "sispec": 13.282279968261719,
+      "si_sdr": 9.619987487792969
     },
     {
       "example_id": "0",
@@ -86,9 +86,99 @@
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
       "relative_wav_path": "mean_shift/bwe_0_local_mean_clean_lowband.wav",
-      "lsd": 1.9594981670379639,
-      "sispec": 17.6148738861084,
-      "si_sdr": 16.63377571105957
+      "lsd": 1.5819666385650635,
+      "sispec": 18.42153549194336,
+      "si_sdr": 15.440689086914062
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_0_mean_shift.wav",
+      "lsd": 2.5114378929138184,
+      "sispec": 7.996445178985596,
+      "si_sdr": 3.857530117034912
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_0_local_mean.wav",
+      "lsd": 2.270608425140381,
+      "sispec": 8.015477180480957,
+      "si_sdr": 3.8247885704040527
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_0_local_mean_clean_lowband.wav",
+      "lsd": 2.219475269317627,
+      "sispec": 18.201927185058594,
+      "si_sdr": 15.95389175415039
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "relative_wav_path": "dac_transport/bwe_0_mean_shift.wav",
+      "lsd": 2.8889548778533936,
+      "sispec": 13.688554763793945,
+      "si_sdr": 11.907567977905273
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "relative_wav_path": "dac_transport/bwe_0_local_mean.wav",
+      "lsd": 2.6349220275878906,
+      "sispec": 13.703960418701172,
+      "si_sdr": 11.93755054473877
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "relative_wav_path": "dac_transport/bwe_0_local_mean_clean_lowband.wav",
+      "lsd": 2.60237717628479,
+      "sispec": 17.952831268310547,
+      "si_sdr": 16.463743209838867
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_0_mean_shift.wav",
+      "lsd": 2.2871737480163574,
+      "sispec": 15.564760208129883,
+      "si_sdr": 13.932843208312988
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_0_local_mean.wav",
+      "lsd": 2.3987059593200684,
+      "sispec": 15.294168472290039,
+      "si_sdr": 13.822369575500488
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_0_local_mean_clean_lowband.wav",
+      "lsd": 2.364290237426758,
+      "sispec": 17.544572830200195,
+      "si_sdr": 16.77275276184082
     },
     {
       "example_id": "1",
@@ -127,7 +217,7 @@
       "label": "CQTDiff",
       "relative_wav_path": "cqtdiff/bwe_1_CQTDiff.wav",
       "lsd": 2.1079633235931396,
-      "sispec": 13.702579498291016,
+      "sispec": 13.7025785446167,
       "si_sdr": -16.633216857910156
     },
     {
@@ -138,7 +228,7 @@
       "relative_wav_path": "IBAR/bwe_1_IBAR.wav",
       "lsd": 1.7018990516662598,
       "sispec": 2.0783166885375977,
-      "si_sdr": -34.45365524291992
+      "si_sdr": -34.45365905761719
     },
     {
       "example_id": "1",
@@ -156,9 +246,9 @@
       "folder": "mean_shift",
       "label": "Mean Shift",
       "relative_wav_path": "mean_shift/bwe_1_mean_shift.wav",
-      "lsd": 1.9976872205734253,
-      "sispec": 17.592967987060547,
-      "si_sdr": 14.977689743041992
+      "lsd": 1.5131529569625854,
+      "sispec": 17.820964813232422,
+      "si_sdr": 14.797887802124023
     },
     {
       "example_id": "1",
@@ -166,9 +256,9 @@
       "folder": "mean_shift",
       "label": "Local Mean",
       "relative_wav_path": "mean_shift/bwe_1_local_mean.wav",
-      "lsd": 2.1121745109558105,
-      "sispec": 17.572235107421875,
-      "si_sdr": 15.07530689239502
+      "lsd": 1.4950605630874634,
+      "sispec": 17.81926155090332,
+      "si_sdr": 14.721702575683594
     },
     {
       "example_id": "1",
@@ -176,9 +266,99 @@
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
       "relative_wav_path": "mean_shift/bwe_1_local_mean_clean_lowband.wav",
-      "lsd": 2.078880548477173,
-      "sispec": 20.79279136657715,
-      "si_sdr": 20.161277770996094
+      "lsd": 1.4469043016433716,
+      "sispec": 21.67584991455078,
+      "si_sdr": 19.710702896118164
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_1_mean_shift.wav",
+      "lsd": 1.4370856285095215,
+      "sispec": 11.954878807067871,
+      "si_sdr": 8.066941261291504
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_1_local_mean.wav",
+      "lsd": 1.3845703601837158,
+      "sispec": 11.537958145141602,
+      "si_sdr": 7.868711948394775
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_1_local_mean_clean_lowband.wav",
+      "lsd": 1.319252848625183,
+      "sispec": 21.815399169921875,
+      "si_sdr": 19.25949478149414
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "relative_wav_path": "dac_transport/bwe_1_mean_shift.wav",
+      "lsd": 1.5034433603286743,
+      "sispec": 17.373598098754883,
+      "si_sdr": 15.343340873718262
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "relative_wav_path": "dac_transport/bwe_1_local_mean.wav",
+      "lsd": 1.5293753147125244,
+      "sispec": 17.492563247680664,
+      "si_sdr": 15.475188255310059
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "relative_wav_path": "dac_transport/bwe_1_local_mean_clean_lowband.wav",
+      "lsd": 1.4896857738494873,
+      "sispec": 21.605737686157227,
+      "si_sdr": 19.7894287109375
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_1_mean_shift.wav",
+      "lsd": 1.711679458618164,
+      "sispec": 19.945491790771484,
+      "si_sdr": 17.989925384521484
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_1_local_mean.wav",
+      "lsd": 1.7410368919372559,
+      "sispec": 19.645462036132812,
+      "si_sdr": 18.070587158203125
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_1_local_mean_clean_lowband.wav",
+      "lsd": 1.708046793937683,
+      "sispec": 21.213380813598633,
+      "si_sdr": 20.099334716796875
     },
     {
       "example_id": "2",
@@ -227,7 +407,7 @@
       "label": "IBAR",
       "relative_wav_path": "IBAR/bwe_2_IBAR.wav",
       "lsd": 1.3243892192840576,
-      "sispec": 10.425464630126953,
+      "sispec": 10.425466537475586,
       "si_sdr": -19.17513084411621
     },
     {
@@ -257,7 +437,7 @@
       "label": "Local Mean",
       "relative_wav_path": "mean_shift/bwe_2_local_mean.wav",
       "lsd": 0.9365177750587463,
-      "sispec": 13.43901252746582,
+      "sispec": 13.439014434814453,
       "si_sdr": 9.52311897277832
     },
     {
@@ -268,7 +448,97 @@
       "relative_wav_path": "mean_shift/bwe_2_local_mean_clean_lowband.wav",
       "lsd": 0.84090256690979,
       "sispec": 30.612403869628906,
-      "si_sdr": 29.27505874633789
+      "si_sdr": 29.275056838989258
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_2_mean_shift.wav",
+      "lsd": 0.9632961750030518,
+      "sispec": 10.756731033325195,
+      "si_sdr": 6.383826732635498
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_2_local_mean.wav",
+      "lsd": 1.0648174285888672,
+      "sispec": 10.450844764709473,
+      "si_sdr": 6.201382160186768
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_2_local_mean_clean_lowband.wav",
+      "lsd": 0.9741288423538208,
+      "sispec": 30.028438568115234,
+      "si_sdr": 29.717321395874023
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "relative_wav_path": "dac_transport/bwe_2_mean_shift.wav",
+      "lsd": 0.958462655544281,
+      "sispec": 14.687707901000977,
+      "si_sdr": 12.309009552001953
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "relative_wav_path": "dac_transport/bwe_2_local_mean.wav",
+      "lsd": 1.0649479627609253,
+      "sispec": 15.013700485229492,
+      "si_sdr": 12.613239288330078
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "relative_wav_path": "dac_transport/bwe_2_local_mean_clean_lowband.wav",
+      "lsd": 0.9862362742424011,
+      "sispec": 30.07946014404297,
+      "si_sdr": 29.69587516784668
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_2_mean_shift.wav",
+      "lsd": 1.8091349601745605,
+      "sispec": 19.56818199157715,
+      "si_sdr": 16.935739517211914
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_2_local_mean.wav",
+      "lsd": 1.669049859046936,
+      "sispec": 19.949913024902344,
+      "si_sdr": 17.274799346923828
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_2_local_mean_clean_lowband.wav",
+      "lsd": 1.6286824941635132,
+      "sispec": 30.506183624267578,
+      "si_sdr": 29.433042526245117
     },
     {
       "example_id": "4",
@@ -308,7 +578,7 @@
       "relative_wav_path": "cqtdiff/bwe_4_CQTDiff.wav",
       "lsd": 1.6922070980072021,
       "sispec": 20.276569366455078,
-      "si_sdr": -33.712913513183594
+      "si_sdr": -33.712921142578125
     },
     {
       "example_id": "4",
@@ -317,7 +587,7 @@
       "label": "IBAR",
       "relative_wav_path": "IBAR/bwe_4_IBAR.wav",
       "lsd": 1.4587959051132202,
-      "sispec": 7.693471908569336,
+      "sispec": 7.693473815917969,
       "si_sdr": -24.37045669555664
     },
     {
@@ -336,9 +606,9 @@
       "folder": "mean_shift",
       "label": "Mean Shift",
       "relative_wav_path": "mean_shift/bwe_4_mean_shift.wav",
-      "lsd": 1.1362371444702148,
-      "sispec": 16.05834197998047,
-      "si_sdr": 12.890137672424316
+      "lsd": 1.745792031288147,
+      "sispec": 15.827409744262695,
+      "si_sdr": 12.635197639465332
     },
     {
       "example_id": "4",
@@ -346,9 +616,9 @@
       "folder": "mean_shift",
       "label": "Local Mean",
       "relative_wav_path": "mean_shift/bwe_4_local_mean.wav",
-      "lsd": 1.034232497215271,
-      "sispec": 16.148679733276367,
-      "si_sdr": 12.94498062133789
+      "lsd": 1.7649133205413818,
+      "sispec": 15.944509506225586,
+      "si_sdr": 12.685636520385742
     },
     {
       "example_id": "4",
@@ -356,9 +626,99 @@
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
       "relative_wav_path": "mean_shift/bwe_4_local_mean_clean_lowband.wav",
-      "lsd": 0.9586771726608276,
-      "sispec": 33.675716400146484,
-      "si_sdr": 31.15005111694336
+      "lsd": 1.716446876525879,
+      "sispec": 24.798995971679688,
+      "si_sdr": 23.578933715820312
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_4_mean_shift.wav",
+      "lsd": 1.6229296922683716,
+      "sispec": 12.347053527832031,
+      "si_sdr": 8.363760948181152
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_4_local_mean.wav",
+      "lsd": 1.6044516563415527,
+      "sispec": 11.891502380371094,
+      "si_sdr": 7.948245525360107
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_4_local_mean_clean_lowband.wav",
+      "lsd": 1.5549566745758057,
+      "sispec": 24.70929718017578,
+      "si_sdr": 23.768835067749023
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "relative_wav_path": "dac_transport/bwe_4_mean_shift.wav",
+      "lsd": 1.8612041473388672,
+      "sispec": 15.858448028564453,
+      "si_sdr": 14.014729499816895
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "relative_wav_path": "dac_transport/bwe_4_local_mean.wav",
+      "lsd": 1.8493778705596924,
+      "sispec": 15.658758163452148,
+      "si_sdr": 13.953784942626953
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "relative_wav_path": "dac_transport/bwe_4_local_mean_clean_lowband.wav",
+      "lsd": 1.8133493661880493,
+      "sispec": 30.178035736083984,
+      "si_sdr": 28.68311309814453
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_4_mean_shift.wav",
+      "lsd": 1.922642707824707,
+      "sispec": 19.786123275756836,
+      "si_sdr": 17.5673885345459
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_4_local_mean.wav",
+      "lsd": 1.7978359460830688,
+      "sispec": 19.888063430786133,
+      "si_sdr": 17.62371826171875
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_4_local_mean_clean_lowband.wav",
+      "lsd": 1.7603179216384888,
+      "sispec": 32.343650817871094,
+      "si_sdr": 31.03030776977539
     },
     {
       "example_id": "5",
@@ -397,8 +757,8 @@
       "label": "CQTDiff",
       "relative_wav_path": "cqtdiff/bwe_5_CQTDiff.wav",
       "lsd": 1.39926278591156,
-      "sispec": 19.942338943481445,
-      "si_sdr": -10.273165702819824
+      "sispec": 19.942340850830078,
+      "si_sdr": -10.273164749145508
     },
     {
       "example_id": "5",
@@ -408,7 +768,7 @@
       "relative_wav_path": "IBAR/bwe_5_IBAR.wav",
       "lsd": 1.1657055616378784,
       "sispec": 11.467823028564453,
-      "si_sdr": -50.76101303100586
+      "si_sdr": -50.761009216308594
     },
     {
       "example_id": "5",
@@ -428,7 +788,7 @@
       "relative_wav_path": "mean_shift/bwe_5_mean_shift.wav",
       "lsd": 1.0822746753692627,
       "sispec": 14.532001495361328,
-      "si_sdr": 10.807472229003906
+      "si_sdr": 10.807474136352539
     },
     {
       "example_id": "5",
@@ -438,7 +798,7 @@
       "relative_wav_path": "mean_shift/bwe_5_local_mean.wav",
       "lsd": 1.0542677640914917,
       "sispec": 14.670303344726562,
-      "si_sdr": 10.978500366210938
+      "si_sdr": 10.978499412536621
     },
     {
       "example_id": "5",
@@ -447,8 +807,98 @@
       "label": "Local Mean with Clean Lowband",
       "relative_wav_path": "mean_shift/bwe_5_local_mean_clean_lowband.wav",
       "lsd": 0.9776952266693115,
-      "sispec": 31.596115112304688,
+      "sispec": 31.59611701965332,
       "si_sdr": 29.460628509521484
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_5_mean_shift.wav",
+      "lsd": 1.0611741542816162,
+      "sispec": 9.961787223815918,
+      "si_sdr": 5.866231441497803
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_5_local_mean.wav",
+      "lsd": 1.0466948747634888,
+      "sispec": 10.287827491760254,
+      "si_sdr": 6.293213367462158
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "relative_wav_path": "codicodec_transport/bwe_5_local_mean_clean_lowband.wav",
+      "lsd": 0.9584558010101318,
+      "sispec": 31.139833450317383,
+      "si_sdr": 29.92396354675293
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "relative_wav_path": "dac_transport/bwe_5_mean_shift.wav",
+      "lsd": 1.1898353099822998,
+      "sispec": 14.506014823913574,
+      "si_sdr": 12.476545333862305
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "relative_wav_path": "dac_transport/bwe_5_local_mean.wav",
+      "lsd": 1.080562710762024,
+      "sispec": 14.859856605529785,
+      "si_sdr": 12.782571792602539
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "relative_wav_path": "dac_transport/bwe_5_local_mean_clean_lowband.wav",
+      "lsd": 1.0192278623580933,
+      "sispec": 31.379899978637695,
+      "si_sdr": 29.74915313720703
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_5_mean_shift.wav",
+      "lsd": 1.4820525646209717,
+      "sispec": 18.863746643066406,
+      "si_sdr": 16.457748413085938
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_5_local_mean.wav",
+      "lsd": 1.3581351041793823,
+      "sispec": 19.24779510498047,
+      "si_sdr": 16.847034454345703
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "relative_wav_path": "encodec_transport/bwe_5_local_mean_clean_lowband.wav",
+      "lsd": 1.3182517290115356,
+      "sispec": 31.960567474365234,
+      "si_sdr": 29.547752380371094
     }
   ],
   "by_relative_wav_path": {
@@ -476,7 +926,7 @@
       "folder": "audiosr",
       "label": "AudioSR",
       "lsd": 2.2212975025177,
-      "sispec": 13.016685485839844,
+      "sispec": 13.01668643951416,
       "si_sdr": 9.572243690490723
     },
     "cqtdiff/bwe_0_CQTDiff.wav": {
@@ -486,7 +936,7 @@
       "label": "CQTDiff",
       "lsd": 3.295947790145874,
       "sispec": 15.112468719482422,
-      "si_sdr": -16.396642684936523
+      "si_sdr": -16.396644592285156
     },
     "IBAR/bwe_0_IBAR.wav": {
       "example_id": "0",
@@ -495,7 +945,7 @@
       "label": "IBAR",
       "lsd": 1.8421211242675781,
       "sispec": 6.855706691741943,
-      "si_sdr": -32.1743049621582
+      "si_sdr": -32.17430877685547
     },
     "A2SB/bwe_0_A2SB_4split.wav": {
       "example_id": "0",
@@ -511,27 +961,108 @@
       "example_key": "bwe_0",
       "folder": "mean_shift",
       "label": "Mean Shift",
-      "lsd": 1.8652464151382446,
-      "sispec": 12.999942779541016,
-      "si_sdr": 9.979141235351562
+      "lsd": 1.7821152210235596,
+      "sispec": 13.213174819946289,
+      "si_sdr": 9.690119743347168
     },
     "mean_shift/bwe_0_local_mean.wav": {
       "example_id": "0",
       "example_key": "bwe_0",
       "folder": "mean_shift",
       "label": "Local Mean",
-      "lsd": 2.0011487007141113,
-      "sispec": 12.955286026000977,
-      "si_sdr": 9.973068237304688
+      "lsd": 1.6363492012023926,
+      "sispec": 13.282279968261719,
+      "si_sdr": 9.619987487792969
     },
     "mean_shift/bwe_0_local_mean_clean_lowband.wav": {
       "example_id": "0",
       "example_key": "bwe_0",
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
-      "lsd": 1.9594981670379639,
-      "sispec": 17.6148738861084,
-      "si_sdr": 16.63377571105957
+      "lsd": 1.5819666385650635,
+      "sispec": 18.42153549194336,
+      "si_sdr": 15.440689086914062
+    },
+    "codicodec_transport/bwe_0_mean_shift.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "lsd": 2.5114378929138184,
+      "sispec": 7.996445178985596,
+      "si_sdr": 3.857530117034912
+    },
+    "codicodec_transport/bwe_0_local_mean.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "lsd": 2.270608425140381,
+      "sispec": 8.015477180480957,
+      "si_sdr": 3.8247885704040527
+    },
+    "codicodec_transport/bwe_0_local_mean_clean_lowband.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "lsd": 2.219475269317627,
+      "sispec": 18.201927185058594,
+      "si_sdr": 15.95389175415039
+    },
+    "dac_transport/bwe_0_mean_shift.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "lsd": 2.8889548778533936,
+      "sispec": 13.688554763793945,
+      "si_sdr": 11.907567977905273
+    },
+    "dac_transport/bwe_0_local_mean.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "lsd": 2.6349220275878906,
+      "sispec": 13.703960418701172,
+      "si_sdr": 11.93755054473877
+    },
+    "dac_transport/bwe_0_local_mean_clean_lowband.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "lsd": 2.60237717628479,
+      "sispec": 17.952831268310547,
+      "si_sdr": 16.463743209838867
+    },
+    "encodec_transport/bwe_0_mean_shift.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "lsd": 2.2871737480163574,
+      "sispec": 15.564760208129883,
+      "si_sdr": 13.932843208312988
+    },
+    "encodec_transport/bwe_0_local_mean.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "lsd": 2.3987059593200684,
+      "sispec": 15.294168472290039,
+      "si_sdr": 13.822369575500488
+    },
+    "encodec_transport/bwe_0_local_mean_clean_lowband.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "lsd": 2.364290237426758,
+      "sispec": 17.544572830200195,
+      "si_sdr": 16.77275276184082
     },
     "ground_truth/bwe_1_GT.wav": {
       "example_id": "1",
@@ -566,7 +1097,7 @@
       "folder": "cqtdiff",
       "label": "CQTDiff",
       "lsd": 2.1079633235931396,
-      "sispec": 13.702579498291016,
+      "sispec": 13.7025785446167,
       "si_sdr": -16.633216857910156
     },
     "IBAR/bwe_1_IBAR.wav": {
@@ -576,7 +1107,7 @@
       "label": "IBAR",
       "lsd": 1.7018990516662598,
       "sispec": 2.0783166885375977,
-      "si_sdr": -34.45365524291992
+      "si_sdr": -34.45365905761719
     },
     "A2SB/bwe_1_A2SB_4split.wav": {
       "example_id": "1",
@@ -592,27 +1123,108 @@
       "example_key": "bwe_1",
       "folder": "mean_shift",
       "label": "Mean Shift",
-      "lsd": 1.9976872205734253,
-      "sispec": 17.592967987060547,
-      "si_sdr": 14.977689743041992
+      "lsd": 1.5131529569625854,
+      "sispec": 17.820964813232422,
+      "si_sdr": 14.797887802124023
     },
     "mean_shift/bwe_1_local_mean.wav": {
       "example_id": "1",
       "example_key": "bwe_1",
       "folder": "mean_shift",
       "label": "Local Mean",
-      "lsd": 2.1121745109558105,
-      "sispec": 17.572235107421875,
-      "si_sdr": 15.07530689239502
+      "lsd": 1.4950605630874634,
+      "sispec": 17.81926155090332,
+      "si_sdr": 14.721702575683594
     },
     "mean_shift/bwe_1_local_mean_clean_lowband.wav": {
       "example_id": "1",
       "example_key": "bwe_1",
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
-      "lsd": 2.078880548477173,
-      "sispec": 20.79279136657715,
-      "si_sdr": 20.161277770996094
+      "lsd": 1.4469043016433716,
+      "sispec": 21.67584991455078,
+      "si_sdr": 19.710702896118164
+    },
+    "codicodec_transport/bwe_1_mean_shift.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "lsd": 1.4370856285095215,
+      "sispec": 11.954878807067871,
+      "si_sdr": 8.066941261291504
+    },
+    "codicodec_transport/bwe_1_local_mean.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "lsd": 1.3845703601837158,
+      "sispec": 11.537958145141602,
+      "si_sdr": 7.868711948394775
+    },
+    "codicodec_transport/bwe_1_local_mean_clean_lowband.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "lsd": 1.319252848625183,
+      "sispec": 21.815399169921875,
+      "si_sdr": 19.25949478149414
+    },
+    "dac_transport/bwe_1_mean_shift.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "lsd": 1.5034433603286743,
+      "sispec": 17.373598098754883,
+      "si_sdr": 15.343340873718262
+    },
+    "dac_transport/bwe_1_local_mean.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "lsd": 1.5293753147125244,
+      "sispec": 17.492563247680664,
+      "si_sdr": 15.475188255310059
+    },
+    "dac_transport/bwe_1_local_mean_clean_lowband.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "lsd": 1.4896857738494873,
+      "sispec": 21.605737686157227,
+      "si_sdr": 19.7894287109375
+    },
+    "encodec_transport/bwe_1_mean_shift.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "lsd": 1.711679458618164,
+      "sispec": 19.945491790771484,
+      "si_sdr": 17.989925384521484
+    },
+    "encodec_transport/bwe_1_local_mean.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "lsd": 1.7410368919372559,
+      "sispec": 19.645462036132812,
+      "si_sdr": 18.070587158203125
+    },
+    "encodec_transport/bwe_1_local_mean_clean_lowband.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "lsd": 1.708046793937683,
+      "sispec": 21.213380813598633,
+      "si_sdr": 20.099334716796875
     },
     "ground_truth/bwe_2_GT.wav": {
       "example_id": "2",
@@ -656,7 +1268,7 @@
       "folder": "IBAR",
       "label": "IBAR",
       "lsd": 1.3243892192840576,
-      "sispec": 10.425464630126953,
+      "sispec": 10.425466537475586,
       "si_sdr": -19.17513084411621
     },
     "A2SB/bwe_2_A2SB_4split.wav": {
@@ -683,7 +1295,7 @@
       "folder": "mean_shift",
       "label": "Local Mean",
       "lsd": 0.9365177750587463,
-      "sispec": 13.43901252746582,
+      "sispec": 13.439014434814453,
       "si_sdr": 9.52311897277832
     },
     "mean_shift/bwe_2_local_mean_clean_lowband.wav": {
@@ -693,7 +1305,88 @@
       "label": "Local Mean with Clean Lowband",
       "lsd": 0.84090256690979,
       "sispec": 30.612403869628906,
-      "si_sdr": 29.27505874633789
+      "si_sdr": 29.275056838989258
+    },
+    "codicodec_transport/bwe_2_mean_shift.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "lsd": 0.9632961750030518,
+      "sispec": 10.756731033325195,
+      "si_sdr": 6.383826732635498
+    },
+    "codicodec_transport/bwe_2_local_mean.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "lsd": 1.0648174285888672,
+      "sispec": 10.450844764709473,
+      "si_sdr": 6.201382160186768
+    },
+    "codicodec_transport/bwe_2_local_mean_clean_lowband.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "lsd": 0.9741288423538208,
+      "sispec": 30.028438568115234,
+      "si_sdr": 29.717321395874023
+    },
+    "dac_transport/bwe_2_mean_shift.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "lsd": 0.958462655544281,
+      "sispec": 14.687707901000977,
+      "si_sdr": 12.309009552001953
+    },
+    "dac_transport/bwe_2_local_mean.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "lsd": 1.0649479627609253,
+      "sispec": 15.013700485229492,
+      "si_sdr": 12.613239288330078
+    },
+    "dac_transport/bwe_2_local_mean_clean_lowband.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "lsd": 0.9862362742424011,
+      "sispec": 30.07946014404297,
+      "si_sdr": 29.69587516784668
+    },
+    "encodec_transport/bwe_2_mean_shift.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "lsd": 1.8091349601745605,
+      "sispec": 19.56818199157715,
+      "si_sdr": 16.935739517211914
+    },
+    "encodec_transport/bwe_2_local_mean.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "lsd": 1.669049859046936,
+      "sispec": 19.949913024902344,
+      "si_sdr": 17.274799346923828
+    },
+    "encodec_transport/bwe_2_local_mean_clean_lowband.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "lsd": 1.6286824941635132,
+      "sispec": 30.506183624267578,
+      "si_sdr": 29.433042526245117
     },
     "ground_truth/bwe_4_GT.wav": {
       "example_id": "4",
@@ -729,7 +1422,7 @@
       "label": "CQTDiff",
       "lsd": 1.6922070980072021,
       "sispec": 20.276569366455078,
-      "si_sdr": -33.712913513183594
+      "si_sdr": -33.712921142578125
     },
     "IBAR/bwe_4_IBAR.wav": {
       "example_id": "4",
@@ -737,7 +1430,7 @@
       "folder": "IBAR",
       "label": "IBAR",
       "lsd": 1.4587959051132202,
-      "sispec": 7.693471908569336,
+      "sispec": 7.693473815917969,
       "si_sdr": -24.37045669555664
     },
     "A2SB/bwe_4_A2SB_4split.wav": {
@@ -754,27 +1447,108 @@
       "example_key": "bwe_4",
       "folder": "mean_shift",
       "label": "Mean Shift",
-      "lsd": 1.1362371444702148,
-      "sispec": 16.05834197998047,
-      "si_sdr": 12.890137672424316
+      "lsd": 1.745792031288147,
+      "sispec": 15.827409744262695,
+      "si_sdr": 12.635197639465332
     },
     "mean_shift/bwe_4_local_mean.wav": {
       "example_id": "4",
       "example_key": "bwe_4",
       "folder": "mean_shift",
       "label": "Local Mean",
-      "lsd": 1.034232497215271,
-      "sispec": 16.148679733276367,
-      "si_sdr": 12.94498062133789
+      "lsd": 1.7649133205413818,
+      "sispec": 15.944509506225586,
+      "si_sdr": 12.685636520385742
     },
     "mean_shift/bwe_4_local_mean_clean_lowband.wav": {
       "example_id": "4",
       "example_key": "bwe_4",
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
-      "lsd": 0.9586771726608276,
-      "sispec": 33.675716400146484,
-      "si_sdr": 31.15005111694336
+      "lsd": 1.716446876525879,
+      "sispec": 24.798995971679688,
+      "si_sdr": 23.578933715820312
+    },
+    "codicodec_transport/bwe_4_mean_shift.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "lsd": 1.6229296922683716,
+      "sispec": 12.347053527832031,
+      "si_sdr": 8.363760948181152
+    },
+    "codicodec_transport/bwe_4_local_mean.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "lsd": 1.6044516563415527,
+      "sispec": 11.891502380371094,
+      "si_sdr": 7.948245525360107
+    },
+    "codicodec_transport/bwe_4_local_mean_clean_lowband.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "lsd": 1.5549566745758057,
+      "sispec": 24.70929718017578,
+      "si_sdr": 23.768835067749023
+    },
+    "dac_transport/bwe_4_mean_shift.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "lsd": 1.8612041473388672,
+      "sispec": 15.858448028564453,
+      "si_sdr": 14.014729499816895
+    },
+    "dac_transport/bwe_4_local_mean.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "lsd": 1.8493778705596924,
+      "sispec": 15.658758163452148,
+      "si_sdr": 13.953784942626953
+    },
+    "dac_transport/bwe_4_local_mean_clean_lowband.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "lsd": 1.8133493661880493,
+      "sispec": 30.178035736083984,
+      "si_sdr": 28.68311309814453
+    },
+    "encodec_transport/bwe_4_mean_shift.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "lsd": 1.922642707824707,
+      "sispec": 19.786123275756836,
+      "si_sdr": 17.5673885345459
+    },
+    "encodec_transport/bwe_4_local_mean.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "lsd": 1.7978359460830688,
+      "sispec": 19.888063430786133,
+      "si_sdr": 17.62371826171875
+    },
+    "encodec_transport/bwe_4_local_mean_clean_lowband.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "lsd": 1.7603179216384888,
+      "sispec": 32.343650817871094,
+      "si_sdr": 31.03030776977539
     },
     "ground_truth/bwe_5_GT.wav": {
       "example_id": "5",
@@ -809,8 +1583,8 @@
       "folder": "cqtdiff",
       "label": "CQTDiff",
       "lsd": 1.39926278591156,
-      "sispec": 19.942338943481445,
-      "si_sdr": -10.273165702819824
+      "sispec": 19.942340850830078,
+      "si_sdr": -10.273164749145508
     },
     "IBAR/bwe_5_IBAR.wav": {
       "example_id": "5",
@@ -819,7 +1593,7 @@
       "label": "IBAR",
       "lsd": 1.1657055616378784,
       "sispec": 11.467823028564453,
-      "si_sdr": -50.76101303100586
+      "si_sdr": -50.761009216308594
     },
     "A2SB/bwe_5_A2SB_4split.wav": {
       "example_id": "5",
@@ -837,7 +1611,7 @@
       "label": "Mean Shift",
       "lsd": 1.0822746753692627,
       "sispec": 14.532001495361328,
-      "si_sdr": 10.807472229003906
+      "si_sdr": 10.807474136352539
     },
     "mean_shift/bwe_5_local_mean.wav": {
       "example_id": "5",
@@ -846,7 +1620,7 @@
       "label": "Local Mean",
       "lsd": 1.0542677640914917,
       "sispec": 14.670303344726562,
-      "si_sdr": 10.978500366210938
+      "si_sdr": 10.978499412536621
     },
     "mean_shift/bwe_5_local_mean_clean_lowband.wav": {
       "example_id": "5",
@@ -854,8 +1628,89 @@
       "folder": "mean_shift",
       "label": "Local Mean with Clean Lowband",
       "lsd": 0.9776952266693115,
-      "sispec": 31.596115112304688,
+      "sispec": 31.59611701965332,
       "si_sdr": 29.460628509521484
+    },
+    "codicodec_transport/bwe_5_mean_shift.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "codicodec_transport",
+      "label": "Mean Shift (CodiCodec)",
+      "lsd": 1.0611741542816162,
+      "sispec": 9.961787223815918,
+      "si_sdr": 5.866231441497803
+    },
+    "codicodec_transport/bwe_5_local_mean.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "codicodec_transport",
+      "label": "Local Mean (CodiCodec)",
+      "lsd": 1.0466948747634888,
+      "sispec": 10.287827491760254,
+      "si_sdr": 6.293213367462158
+    },
+    "codicodec_transport/bwe_5_local_mean_clean_lowband.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "codicodec_transport",
+      "label": "Local Mean with Clean Lowband (CodiCodec)",
+      "lsd": 0.9584558010101318,
+      "sispec": 31.139833450317383,
+      "si_sdr": 29.92396354675293
+    },
+    "dac_transport/bwe_5_mean_shift.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "dac_transport",
+      "label": "Mean Shift (DAC)",
+      "lsd": 1.1898353099822998,
+      "sispec": 14.506014823913574,
+      "si_sdr": 12.476545333862305
+    },
+    "dac_transport/bwe_5_local_mean.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "dac_transport",
+      "label": "Local Mean (DAC)",
+      "lsd": 1.080562710762024,
+      "sispec": 14.859856605529785,
+      "si_sdr": 12.782571792602539
+    },
+    "dac_transport/bwe_5_local_mean_clean_lowband.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "dac_transport",
+      "label": "Local Mean with Clean Lowband (DAC)",
+      "lsd": 1.0192278623580933,
+      "sispec": 31.379899978637695,
+      "si_sdr": 29.74915313720703
+    },
+    "encodec_transport/bwe_5_mean_shift.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "encodec_transport",
+      "label": "Mean Shift (Encodec)",
+      "lsd": 1.4820525646209717,
+      "sispec": 18.863746643066406,
+      "si_sdr": 16.457748413085938
+    },
+    "encodec_transport/bwe_5_local_mean.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "encodec_transport",
+      "label": "Local Mean (Encodec)",
+      "lsd": 1.3581351041793823,
+      "sispec": 19.24779510498047,
+      "si_sdr": 16.847034454345703
+    },
+    "encodec_transport/bwe_5_local_mean_clean_lowband.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "encodec_transport",
+      "label": "Local Mean with Clean Lowband (Encodec)",
+      "lsd": 1.3182517290115356,
+      "sispec": 31.960567474365234,
+      "si_sdr": 29.547752380371094
     }
   }
 }

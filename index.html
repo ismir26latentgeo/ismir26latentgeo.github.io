@@ -449,6 +449,20 @@
       background: #1a1a1a;
       cursor: zoom-in;
     }
+    .spectrogram-missing {
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      margin-bottom: 10px;
+      border: 1px dashed rgba(50, 92, 115, 0.22);
+      border-radius: 10px;
+      background: rgba(50, 92, 115, 0.04);
+      color: var(--muted);
+      text-align: center;
+      padding: 14px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
     .paper-figure img {
       cursor: zoom-in;
     }
@@ -465,6 +479,7 @@
       font-size: 0.74rem;
       color: var(--muted);
       margin-right: 2px;
+      display: none;
     }
     .metric {
       display: inline-flex;
@@ -523,6 +538,14 @@
       color: var(--muted);
       line-height: 1.25;
       word-break: break-word;
+      display: none;
+    }
+    .codec-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+      display: none;
     }
     audio {
       width: 100%;
@@ -887,7 +910,8 @@
     <div class="section-anchor" id="listening-examples"></div>
     <section class="listening-panel">
       <h2>Comparison of Bandwidth Extension Baselines and Low-Rank VAE Latent Transports</h2>
-      <p class="listening-intro">These matched examples combine clean, degraded, published baseline, and transport-based outputs so we can compare restoration behavior both by ear and by spectrogram. The latent transport methods shown here, <strong>Mean Shift</strong> and <strong>Local Mean</strong>, are computed in the latent space of the <strong>Stable Audio Open VAE</strong>. <strong>Local Mean with Clean Lowband</strong> uses the same local-mean restoration, except that content below the 4\,kHz cutoff is replaced by the original clean signal.</p>
+      <p class="listening-intro">These matched examples combine clean, degraded, published baseline, and transport-based outputs so we can compare restoration behavior both by ear and by spectrogram. The original transport cards on this page, <strong>Mean Shift</strong> and <strong>Local Mean</strong>, are computed in the latent space of the <strong>Stable Audio Open VAE</strong>. <strong>Local Mean with Clean Lowband</strong> uses the same local-mean restoration, except that content below the 4\,kHz cutoff is replaced by the original clean signal.</p>
+      <p class="listening-intro">Each example now also includes audio-only saved-transport renders for <strong>CodiCodec</strong>, <strong>DAC</strong>, and <strong>Encodec</strong> using the <strong>MTD 4 kHz</strong> transport vectors. Those added codec cards reuse the same degraded and clean excerpts but do not yet have dedicated spectrogram images embedded in the page.</p>
       <p class="listening-note"><strong>Audio example source.</strong> The listening examples on this page are taken from the <a href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">A2SB demo website</a>.</p>
             <section class="example">
               <div class="example-head">
@@ -965,7 +989,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_0_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.87</span><span class="metric"><span class="metric-label">SiSpec</span> 13.00</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.98</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.78</span><span class="metric"><span class="metric-label">SiSpec</span> 13.21</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.69</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -975,7 +999,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_0_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.00</span><span class="metric"><span class="metric-label">SiSpec</span> 12.96</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.97</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.64</span><span class="metric"><span class="metric-label">SiSpec</span> 13.28</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.62</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -985,7 +1009,97 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_0_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.96</span><span class="metric"><span class="metric-label">SiSpec</span> 17.61</span><span class="metric"><span class="metric-label">SI-SDR</span> 16.63</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.58</span><span class="metric"><span class="metric-label">SiSpec</span> 18.42</span><span class="metric"><span class="metric-label">SI-SDR</span> 15.44</span></div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (CodiCodec)</div>
+                    <div class="filename">bwe_0_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_0_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (CodiCodec)</div>
+                    <div class="filename">bwe_0_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_0_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (CodiCodec)</div>
+                    <div class="filename">bwe_0_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_0_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (DAC)</div>
+                    <div class="filename">bwe_0_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_0_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (DAC)</div>
+                    <div class="filename">bwe_0_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_0_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (DAC)</div>
+                    <div class="filename">bwe_0_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_0_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (Encodec)</div>
+                    <div class="filename">bwe_0_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_0_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (Encodec)</div>
+                    <div class="filename">bwe_0_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_0_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (Encodec)</div>
+                    <div class="filename">bwe_0_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_0_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
                 </div>
                 
               </div>
@@ -1067,7 +1181,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_1_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.00</span><span class="metric"><span class="metric-label">SiSpec</span> 17.59</span><span class="metric"><span class="metric-label">SI-SDR</span> 14.98</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.51</span><span class="metric"><span class="metric-label">SiSpec</span> 17.82</span><span class="metric"><span class="metric-label">SI-SDR</span> 14.80</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1077,7 +1191,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_1_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.11</span><span class="metric"><span class="metric-label">SiSpec</span> 17.57</span><span class="metric"><span class="metric-label">SI-SDR</span> 15.08</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.50</span><span class="metric"><span class="metric-label">SiSpec</span> 17.82</span><span class="metric"><span class="metric-label">SI-SDR</span> 14.72</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1087,7 +1201,97 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_1_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.08</span><span class="metric"><span class="metric-label">SiSpec</span> 20.79</span><span class="metric"><span class="metric-label">SI-SDR</span> 20.16</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.45</span><span class="metric"><span class="metric-label">SiSpec</span> 21.68</span><span class="metric"><span class="metric-label">SI-SDR</span> 19.71</span></div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (CodiCodec)</div>
+                    <div class="filename">bwe_1_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_1_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (CodiCodec)</div>
+                    <div class="filename">bwe_1_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_1_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (CodiCodec)</div>
+                    <div class="filename">bwe_1_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_1_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (DAC)</div>
+                    <div class="filename">bwe_1_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_1_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (DAC)</div>
+                    <div class="filename">bwe_1_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_1_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (DAC)</div>
+                    <div class="filename">bwe_1_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_1_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (Encodec)</div>
+                    <div class="filename">bwe_1_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_1_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (Encodec)</div>
+                    <div class="filename">bwe_1_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_1_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (Encodec)</div>
+                    <div class="filename">bwe_1_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_1_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
                 </div>
                 
               </div>
@@ -1191,6 +1395,96 @@
                   <audio controls preload="none" src="mean_shift/bwe_2_local_mean_clean_lowband.wav"></audio>
                   <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.84</span><span class="metric"><span class="metric-label">SiSpec</span> 30.61</span><span class="metric"><span class="metric-label">SI-SDR</span> 29.28</span></div>
                 </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (CodiCodec)</div>
+                    <div class="filename">bwe_2_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_2_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (CodiCodec)</div>
+                    <div class="filename">bwe_2_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_2_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (CodiCodec)</div>
+                    <div class="filename">bwe_2_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_2_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (DAC)</div>
+                    <div class="filename">bwe_2_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_2_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (DAC)</div>
+                    <div class="filename">bwe_2_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_2_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (DAC)</div>
+                    <div class="filename">bwe_2_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_2_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (Encodec)</div>
+                    <div class="filename">bwe_2_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_2_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (Encodec)</div>
+                    <div class="filename">bwe_2_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_2_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (Encodec)</div>
+                    <div class="filename">bwe_2_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_2_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
                 
               </div>
             </section>
@@ -1271,7 +1565,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_4_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.14</span><span class="metric"><span class="metric-label">SiSpec</span> 16.06</span><span class="metric"><span class="metric-label">SI-SDR</span> 12.89</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.75</span><span class="metric"><span class="metric-label">SiSpec</span> 15.83</span><span class="metric"><span class="metric-label">SI-SDR</span> 12.64</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1281,7 +1575,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_4_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.03</span><span class="metric"><span class="metric-label">SiSpec</span> 16.15</span><span class="metric"><span class="metric-label">SI-SDR</span> 12.94</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.76</span><span class="metric"><span class="metric-label">SiSpec</span> 15.94</span><span class="metric"><span class="metric-label">SI-SDR</span> 12.69</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1291,7 +1585,97 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_4_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.96</span><span class="metric"><span class="metric-label">SiSpec</span> 33.68</span><span class="metric"><span class="metric-label">SI-SDR</span> 31.15</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.72</span><span class="metric"><span class="metric-label">SiSpec</span> 24.80</span><span class="metric"><span class="metric-label">SI-SDR</span> 23.58</span></div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (CodiCodec)</div>
+                    <div class="filename">bwe_4_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_4_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (CodiCodec)</div>
+                    <div class="filename">bwe_4_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_4_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (CodiCodec)</div>
+                    <div class="filename">bwe_4_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_4_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (DAC)</div>
+                    <div class="filename">bwe_4_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_4_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (DAC)</div>
+                    <div class="filename">bwe_4_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_4_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (DAC)</div>
+                    <div class="filename">bwe_4_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_4_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (Encodec)</div>
+                    <div class="filename">bwe_4_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_4_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (Encodec)</div>
+                    <div class="filename">bwe_4_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_4_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (Encodec)</div>
+                    <div class="filename">bwe_4_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_4_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
                 </div>
                 
               </div>
@@ -1395,6 +1779,96 @@
                   <audio controls preload="none" src="mean_shift/bwe_5_local_mean_clean_lowband.wav"></audio>
                   <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.98</span><span class="metric"><span class="metric-label">SiSpec</span> 31.60</span><span class="metric"><span class="metric-label">SI-SDR</span> 29.46</span></div>
                 </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (CodiCodec)</div>
+                    <div class="filename">bwe_5_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_5_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (CodiCodec)</div>
+                    <div class="filename">bwe_5_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_5_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (CodiCodec)</div>
+                    <div class="filename">bwe_5_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="codicodec_transport/bwe_5_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz CodiCodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (DAC)</div>
+                    <div class="filename">bwe_5_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_5_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (DAC)</div>
+                    <div class="filename">bwe_5_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_5_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (DAC)</div>
+                    <div class="filename">bwe_5_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="dac_transport/bwe_5_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz DAC vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Mean Shift (Encodec)</div>
+                    <div class="filename">bwe_5_mean_shift.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_5_mean_shift.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean (Encodec)</div>
+                    <div class="filename">bwe_5_local_mean.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_5_local_mean.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
+
+                <div class="card transport-card">
+                  <div class="card-head">
+                    <div class="method">Local Mean with Clean Lowband (Encodec)</div>
+                    <div class="filename">bwe_5_local_mean_clean_lowband.wav</div>
+                  </div>
+                  <div class="spectrogram-missing">Audio-only codec render.<br>No dedicated spectrogram image is embedded for this variant yet.</div>
+                  <audio controls preload="none" src="encodec_transport/bwe_5_local_mean_clean_lowband.wav"></audio>
+                  <div class="codec-note">Saved transport render from MTD 4 kHz Encodec vectors.</div>
+                </div>
                 
               </div>
             </section>
@@ -1423,7 +1897,7 @@
         lightboxCaption.textContent = '';
       }
 
-      zoomableImages.forEach((img) => {
+      function bindZoomableImage(img) {
         img.addEventListener('click', () => {
           const paperCard = img.closest('.paper-float-card');
           const caption = paperCard?.querySelector('p')?.textContent?.trim();
@@ -1433,6 +1907,10 @@
           lightbox.classList.add('open');
           lightbox.setAttribute('aria-hidden', 'false');
         });
+      }
+
+      zoomableImages.forEach((img) => {
+        bindZoomableImage(img);
       });
 
       closeButton.addEventListener('click', closeLightbox);
@@ -1453,7 +1931,10 @@
           const transportCards = Array.from(grid.querySelectorAll('.card.transport-card'));
           transportCards.forEach((card) => {
             const methodEl = card.querySelector('.method');
-            if (!methodEl) return;
+            const audioEl = card.querySelector('audio');
+            if (!methodEl || !audioEl) return;
+            const source = audioEl.getAttribute('src') || '';
+            if (!source.startsWith('mean_shift/')) return;
             const baseText = methodEl.textContent.trim();
             if (!baseText.endsWith('(VAE)')) {
               methodEl.textContent = `${baseText} (VAE)`;
@@ -1462,7 +1943,102 @@
         });
       }
 
+      const EXTRA_CODEC_METRICS = {
+        "codicodec_transport/bwe_0_mean_shift.wav": { lsd: "2.51", sispec: "8.00", si_sdr: "3.86" },
+        "codicodec_transport/bwe_0_local_mean.wav": { lsd: "2.27", sispec: "8.02", si_sdr: "3.82" },
+        "codicodec_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.22", sispec: "18.20", si_sdr: "15.95" },
+        "codicodec_transport/bwe_1_mean_shift.wav": { lsd: "1.44", sispec: "11.95", si_sdr: "8.07" },
+        "codicodec_transport/bwe_1_local_mean.wav": { lsd: "1.38", sispec: "11.54", si_sdr: "7.87" },
+        "codicodec_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.32", sispec: "21.82", si_sdr: "19.26" },
+        "codicodec_transport/bwe_2_mean_shift.wav": { lsd: "0.96", sispec: "10.76", si_sdr: "6.38" },
+        "codicodec_transport/bwe_2_local_mean.wav": { lsd: "1.06", sispec: "10.45", si_sdr: "6.20" },
+        "codicodec_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "0.97", sispec: "30.03", si_sdr: "29.72" },
+        "codicodec_transport/bwe_4_mean_shift.wav": { lsd: "1.62", sispec: "12.35", si_sdr: "8.36" },
+        "codicodec_transport/bwe_4_local_mean.wav": { lsd: "1.60", sispec: "11.89", si_sdr: "7.95" },
+        "codicodec_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.55", sispec: "24.71", si_sdr: "23.77" },
+        "codicodec_transport/bwe_5_mean_shift.wav": { lsd: "1.06", sispec: "9.96", si_sdr: "5.87" },
+        "codicodec_transport/bwe_5_local_mean.wav": { lsd: "1.05", sispec: "10.29", si_sdr: "6.29" },
+        "codicodec_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "0.96", sispec: "31.14", si_sdr: "29.92" },
+        "dac_transport/bwe_0_mean_shift.wav": { lsd: "2.89", sispec: "13.69", si_sdr: "11.91" },
+        "dac_transport/bwe_0_local_mean.wav": { lsd: "2.63", sispec: "13.70", si_sdr: "11.94" },
+        "dac_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.60", sispec: "17.95", si_sdr: "16.46" },
+        "dac_transport/bwe_1_mean_shift.wav": { lsd: "1.50", sispec: "17.37", si_sdr: "15.34" },
+        "dac_transport/bwe_1_local_mean.wav": { lsd: "1.53", sispec: "17.49", si_sdr: "15.48" },
+        "dac_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.49", sispec: "21.61", si_sdr: "19.79" },
+        "dac_transport/bwe_2_mean_shift.wav": { lsd: "0.96", sispec: "14.69", si_sdr: "12.31" },
+        "dac_transport/bwe_2_local_mean.wav": { lsd: "1.06", sispec: "15.01", si_sdr: "12.61" },
+        "dac_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "0.99", sispec: "30.08", si_sdr: "29.70" },
+        "dac_transport/bwe_4_mean_shift.wav": { lsd: "1.86", sispec: "15.86", si_sdr: "14.01" },
+        "dac_transport/bwe_4_local_mean.wav": { lsd: "1.85", sispec: "15.66", si_sdr: "13.95" },
+        "dac_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.81", sispec: "30.18", si_sdr: "28.68" },
+        "dac_transport/bwe_5_mean_shift.wav": { lsd: "1.19", sispec: "14.51", si_sdr: "12.48" },
+        "dac_transport/bwe_5_local_mean.wav": { lsd: "1.08", sispec: "14.86", si_sdr: "12.78" },
+        "dac_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "1.02", sispec: "31.38", si_sdr: "29.75" },
+        "encodec_transport/bwe_0_mean_shift.wav": { lsd: "2.29", sispec: "15.56", si_sdr: "13.93" },
+        "encodec_transport/bwe_0_local_mean.wav": { lsd: "2.40", sispec: "15.29", si_sdr: "13.82" },
+        "encodec_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.36", sispec: "17.54", si_sdr: "16.77" },
+        "encodec_transport/bwe_1_mean_shift.wav": { lsd: "1.71", sispec: "19.95", si_sdr: "17.99" },
+        "encodec_transport/bwe_1_local_mean.wav": { lsd: "1.74", sispec: "19.65", si_sdr: "18.07" },
+        "encodec_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.71", sispec: "21.21", si_sdr: "20.10" },
+        "encodec_transport/bwe_2_mean_shift.wav": { lsd: "1.81", sispec: "19.57", si_sdr: "16.94" },
+        "encodec_transport/bwe_2_local_mean.wav": { lsd: "1.67", sispec: "19.95", si_sdr: "17.27" },
+        "encodec_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "1.63", sispec: "30.51", si_sdr: "29.43" },
+        "encodec_transport/bwe_4_mean_shift.wav": { lsd: "1.92", sispec: "19.79", si_sdr: "17.57" },
+        "encodec_transport/bwe_4_local_mean.wav": { lsd: "1.80", sispec: "19.89", si_sdr: "17.62" },
+        "encodec_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.76", sispec: "32.34", si_sdr: "31.03" },
+        "encodec_transport/bwe_5_mean_shift.wav": { lsd: "1.48", sispec: "18.86", si_sdr: "16.46" },
+        "encodec_transport/bwe_5_local_mean.wav": { lsd: "1.36", sispec: "19.25", si_sdr: "16.85" },
+        "encodec_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "1.32", sispec: "31.96", si_sdr: "29.55" }
+      };
+
+      function buildMetricStrip(metrics) {
+        return `
+          <div class="metrics">
+            <div class="metrics-title">Raw-clean eval</div>
+            <span class="metric"><span class="metric-label">LSD</span> ${metrics.lsd}</span>
+            <span class="metric"><span class="metric-label">SiSpec</span> ${metrics.sispec}</span>
+            <span class="metric"><span class="metric-label">SI-SDR</span> ${metrics.si_sdr}</span>
+          </div>
+        `;
+      }
+
+      function hydrateAdditionalCodecCards() {
+        document.querySelectorAll('.example .grid .card.transport-card').forEach((card) => {
+          const audioEl = card.querySelector('audio');
+          const methodEl = card.querySelector('.method');
+          if (!audioEl || !methodEl) return;
+          const source = audioEl.getAttribute('src') || '';
+          const match = source.match(/^(codicodec_transport|dac_transport|encodec_transport)\/(.+)\.wav$/);
+          if (!match) return;
+
+          const folder = match[1];
+          const stem = match[2];
+          const placeholder = card.querySelector('.spectrogram-missing');
+          if (placeholder) {
+            const img = document.createElement('img');
+            img.className = 'spectrogram';
+            img.src = `spectrograms/${folder}__${stem}.png`;
+            img.alt = `Spectrogram for ${methodEl.textContent.trim()}`;
+            bindZoomableImage(img);
+            placeholder.replaceWith(img);
+          }
+
+          if (!card.querySelector('.metrics')) {
+            const metrics = EXTRA_CODEC_METRICS[source];
+            if (metrics) {
+              const note = card.querySelector('.codec-note');
+              if (note) {
+                note.insertAdjacentHTML('beforebegin', buildMetricStrip(metrics));
+              } else {
+                card.insertAdjacentHTML('beforeend', buildMetricStrip(metrics));
+              }
+            }
+          }
+        });
+      }
+
       relabelVaeTransportCards();
+      hydrateAdditionalCodecCards();
     })();
   </script>
 </body>
