@@ -1,0 +1,46 @@
+example_id,example_key,folder,label,relative_wav_path,lsd,sispec,si_sdr
+0,bwe_0,ground_truth,GT,ground_truth/bwe_0_GT.wav,,,
+0,bwe_0,degraded,Degraded,degraded/bwe_0_Degraded.wav,5.586267948150635,16.70918083190918,16.696775436401367
+0,bwe_0,audiosr,AudioSR,audiosr/bwe_0_AudioSR.wav,2.2212975025177,13.016685485839844,9.572243690490723
+0,bwe_0,cqtdiff,CQTDiff,cqtdiff/bwe_0_CQTDiff.wav,3.295947790145874,15.112468719482422,-16.396642684936523
+0,bwe_0,IBAR,IBAR,IBAR/bwe_0_IBAR.wav,1.8421211242675781,6.855706691741943,-32.1743049621582
+0,bwe_0,A2SB,A2SB (4-split),A2SB/bwe_0_A2SB_4split.wav,1.6115697622299194,18.370452880859375,14.809574127197266
+0,bwe_0,mean_shift,Mean Shift,mean_shift/bwe_0_mean_shift.wav,1.8652464151382446,12.999942779541016,9.979141235351562
+0,bwe_0,mean_shift,Local Mean,mean_shift/bwe_0_local_mean.wav,2.0011487007141113,12.955286026000977,9.973068237304688
+0,bwe_0,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_0_local_mean_clean_lowband.wav,1.9594981670379639,17.6148738861084,16.63377571105957
+1,bwe_1,ground_truth,GT,ground_truth/bwe_1_GT.wav,,,
+1,bwe_1,degraded,Degraded,degraded/bwe_1_Degraded.wav,4.167448043823242,20.20168113708496,20.191463470458984
+1,bwe_1,audiosr,AudioSR,audiosr/bwe_1_AudioSR.wav,1.953150987625122,10.578056335449219,9.071358680725098
+1,bwe_1,cqtdiff,CQTDiff,cqtdiff/bwe_1_CQTDiff.wav,2.1079633235931396,13.702579498291016,-16.633216857910156
+1,bwe_1,IBAR,IBAR,IBAR/bwe_1_IBAR.wav,1.7018990516662598,2.0783166885375977,-34.45365524291992
+1,bwe_1,A2SB,A2SB (4-split),A2SB/bwe_1_A2SB_4split.wav,1.8320711851119995,21.151809692382812,17.89278793334961
+1,bwe_1,mean_shift,Mean Shift,mean_shift/bwe_1_mean_shift.wav,1.9976872205734253,17.592967987060547,14.977689743041992
+1,bwe_1,mean_shift,Local Mean,mean_shift/bwe_1_local_mean.wav,2.1121745109558105,17.572235107421875,15.07530689239502
+1,bwe_1,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_1_local_mean_clean_lowband.wav,2.078880548477173,20.79279136657715,20.161277770996094
+2,bwe_2,ground_truth,GT,ground_truth/bwe_2_GT.wav,,,
+2,bwe_2,degraded,Degraded,degraded/bwe_2_Degraded.wav,2.5836246013641357,29.339502334594727,29.32499885559082
+2,bwe_2,audiosr,AudioSR,audiosr/bwe_2_AudioSR.wav,1.537705421447754,23.54337501525879,20.746051788330078
+2,bwe_2,cqtdiff,CQTDiff,cqtdiff/bwe_2_CQTDiff.wav,1.692931056022644,16.57894515991211,-10.64554214477539
+2,bwe_2,IBAR,IBAR,IBAR/bwe_2_IBAR.wav,1.3243892192840576,10.425464630126953,-19.17513084411621
+2,bwe_2,A2SB,A2SB (4-split),A2SB/bwe_2_A2SB_4split.wav,1.2507988214492798,30.285966873168945,28.779489517211914
+2,bwe_2,mean_shift,Mean Shift,mean_shift/bwe_2_mean_shift.wav,1.036573052406311,13.40914535522461,9.457274436950684
+2,bwe_2,mean_shift,Local Mean,mean_shift/bwe_2_local_mean.wav,0.9365177750587463,13.43901252746582,9.52311897277832
+2,bwe_2,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_2_local_mean_clean_lowband.wav,0.84090256690979,30.612403869628906,29.27505874633789
+4,bwe_4,ground_truth,GT,ground_truth/bwe_4_GT.wav,,,
+4,bwe_4,degraded,Degraded,degraded/bwe_4_Degraded.wav,3.063385486602783,32.69206619262695,32.671119689941406
+4,bwe_4,audiosr,AudioSR,audiosr/bwe_4_AudioSR.wav,1.8667975664138794,17.868362426757812,16.45169448852539
+4,bwe_4,cqtdiff,CQTDiff,cqtdiff/bwe_4_CQTDiff.wav,1.6922070980072021,20.276569366455078,-33.712913513183594
+4,bwe_4,IBAR,IBAR,IBAR/bwe_4_IBAR.wav,1.4587959051132202,7.693471908569336,-24.37045669555664
+4,bwe_4,A2SB,A2SB (4-split),A2SB/bwe_4_A2SB_4split.wav,1.4850795269012451,33.56126403808594,32.37857437133789
+4,bwe_4,mean_shift,Mean Shift,mean_shift/bwe_4_mean_shift.wav,1.1362371444702148,16.05834197998047,12.890137672424316
+4,bwe_4,mean_shift,Local Mean,mean_shift/bwe_4_local_mean.wav,1.034232497215271,16.148679733276367,12.94498062133789
+4,bwe_4,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_4_local_mean_clean_lowband.wav,0.9586771726608276,33.675716400146484,31.15005111694336
+5,bwe_5,ground_truth,GT,ground_truth/bwe_5_GT.wav,,,
+5,bwe_5,degraded,Degraded,degraded/bwe_5_Degraded.wav,2.075183153152466,29.773290634155273,29.74330711364746
+5,bwe_5,audiosr,AudioSR,audiosr/bwe_5_AudioSR.wav,1.899301528930664,22.11094856262207,18.513519287109375
+5,bwe_5,cqtdiff,CQTDiff,cqtdiff/bwe_5_CQTDiff.wav,1.39926278591156,19.942338943481445,-10.273165702819824
+5,bwe_5,IBAR,IBAR,IBAR/bwe_5_IBAR.wav,1.1657055616378784,11.467823028564453,-50.76101303100586
+5,bwe_5,A2SB,A2SB (4-split),A2SB/bwe_5_A2SB_4split.wav,1.594751000404358,28.5256404876709,27.639591217041016
+5,bwe_5,mean_shift,Mean Shift,mean_shift/bwe_5_mean_shift.wav,1.0822746753692627,14.532001495361328,10.807472229003906
+5,bwe_5,mean_shift,Local Mean,mean_shift/bwe_5_local_mean.wav,1.0542677640914917,14.670303344726562,10.978500366210938
+5,bwe_5,mean_shift,Local Mean with Clean Lowband,mean_shift/bwe_5_local_mean_clean_lowband.wav,0.9776952266693115,31.596115112304688,29.460628509521484

@@ -1,0 +1,422 @@
+{
+  "summary_json": "transport_analysis/outputs/20260409-153013_bwe_transport_matrix/mtd/vae/cutoff_4000hz/summary.json",
+  "transport_vectors_path": "transport_analysis/outputs/20260409-153013_bwe_transport_matrix/mtd/vae/cutoff_4000hz/transport_vectors.pt",
+  "codec": "vae",
+  "condition_label": "cutoff_4000hz",
+  "degradation_mode": "bwe",
+  "source_metadata": {
+    "filename": "bwe_5_GT.wav",
+    "source": "external_audio",
+    "input_is_degraded": false,
+    "cutoff_freq": 4000.0,
+    "hpf_cutoff_freq": NaN,
+    "resample_factor": 5.5125,
+    "noise_type": "none",
+    "snr_db": NaN,
+    "clipping_sdr": NaN,
+    "clipping_applied": 0.0,
+    "input_start_seconds": 0.0,
+    "duration_seconds": 10.099977324263039,
+    "clean_reference_path": null
+  },
+  "degraded_input_descriptors": {
+    "spectral_centroid": 822.5545043945312,
+    "spectral_bandwidth": 803.102783203125,
+    "spectral_rolloff": 1585.3389892578125,
+    "spectral_flatness": 0.000160575145855546,
+    "highband_ratio": 3.515179923851974e-05,
+    "loudness_rms": 0.019729597494006157
+  },
+  "chunk_size_samples": 65536,
+  "hop_size_samples": 32768,
+  "methods": {
+    "identity_latent": {
+      "render_info": {
+        "num_chunks": 13,
+        "chunk_size_samples": 65536,
+        "hop_size_samples": 32768,
+        "transport_scale": 1.0,
+        "bucket_ids": null,
+        "adaptation_modes": [
+          "identity"
+        ]
+      },
+      "audio_report": {
+        "audio_descriptors": {
+          "spectral_centroid": 757.4829711914062,
+          "spectral_bandwidth": 832.3517456054688,
+          "spectral_rolloff": 1403.0985107421875,
+          "spectral_flatness": 0.003194029675796628,
+          "highband_ratio": 0.0011928471503779292,
+          "loudness_rms": 0.021803421899676323
+        },
+        "audio_vs_raw_clean": {
+          "waveform_mse": 3.7070429243613034e-05,
+          "snr_db": 10.216437339782715,
+          "si_sdr": 10.924276351928711,
+          "stft_l1": 0.02595948986709118,
+          "spectral_centroid_shift": 423.32476806640625
+        },
+        "audio_vs_raw_clean_eval": {
+          "sispec": 14.610905647277832,
+          "lsd": 3.029904365539551,
+          "log_kurtosis_ratio": 0.09214123338460922,
+          "log_kurtosis_ratio_pi": 0.07405835390090942,
+          "mel_cepstral_distortion": 226.9672393798828,
+          "fw_snr_seg": 1.952735424041748,
+          "snr": 10.216437339782715,
+          "spectral_centroid_shift": 423.32501220703125,
+          "si-snr": 10.95102310180664,
+          "stft_loss": 0.058429181575775146,
+          "stft_magnitude_loss": 0.01932036690413952,
+          "mel_stft_loss": 3.9396650791168213,
+          "si-sdr": 10.95102310180664
+        },
+        "audio_vs_decoded_clean": {
+          "waveform_mse": 1.4605499018216506e-05,
+          "snr_db": 15.150800704956055,
+          "si_sdr": 15.038597106933594,
+          "stft_l1": 0.018318472430109978,
+          "spectral_centroid_shift": 274.28094482421875
+        },
+        "audio_vs_decoded_clean_eval": {
+          "sispec": 17.529159545898438,
+          "lsd": 2.7226765155792236,
+          "log_kurtosis_ratio": 0.03899010643362999,
+          "log_kurtosis_ratio_pi": 0.05395202711224556,
+          "mel_cepstral_distortion": 184.35516357421875,
+          "fw_snr_seg": 3.046008348464966,
+          "snr": 15.150800704956055,
+          "spectral_centroid_shift": 274.28118896484375,
+          "si-snr": 15.125255584716797,
+          "stft_loss": 0.0394425168633461,
+          "stft_magnitude_loss": 0.013523290865123272,
+          "mel_stft_loss": 3.542792558670044,
+          "si-sdr": 15.125255584716797
+        }
+      },
+      "clean_lowband_hybrid": {
+        "cutoff_freq": 4000.0,
+        "filename": "identity_latent_clean_lowband.wav",
+        "audio_report": {
+          "audio_descriptors": {
+            "spectral_centroid": 842.2307739257812,
+            "spectral_bandwidth": 895.9796752929688,
+            "spectral_rolloff": 1606.748291015625,
+            "spectral_flatness": 0.003744834568351507,
+            "highband_ratio": 0.0016277875984087586,
+            "loudness_rms": 0.019730499014258385
+          },
+          "audio_vs_raw_clean": {
+            "waveform_mse": 3.658079776869272e-07,
+            "snr_db": 30.274208068847656,
+            "si_sdr": 30.270111083984375,
+            "stft_l1": 0.0035271502565592527,
+            "spectral_centroid_shift": 338.57696533203125
+          },
+          "audio_vs_raw_clean_eval": {
+            "sispec": 30.349262237548828,
+            "lsd": 2.9965898990631104,
+            "log_kurtosis_ratio": 0.0005725472583435476,
+            "log_kurtosis_ratio_pi": 0.0014723698841407895,
+            "mel_cepstral_distortion": 158.09873962402344,
+            "fw_snr_seg": 34.789188385009766,
+            "snr": 30.27420997619629,
+            "spectral_centroid_shift": 338.5971984863281,
+            "si-snr": 30.270038604736328,
+            "stft_loss": 0.006009278818964958,
+            "stft_magnitude_loss": 0.0025971129070967436,
+            "mel_stft_loss": 3.454122304916382,
+            "si-sdr": 30.270038604736328
+          },
+          "audio_vs_decoded_clean": {
+            "waveform_mse": 3.700480374391191e-05,
+            "snr_db": 11.113384246826172,
+            "si_sdr": 10.988481521606445,
+            "stft_l1": 0.025602012872695923,
+            "spectral_centroid_shift": 189.53314208984375
+          },
+          "audio_vs_decoded_clean_eval": {
+            "sispec": 14.797152519226074,
+            "lsd": 2.71677565574646,
+            "log_kurtosis_ratio": 0.052578557282686234,
+            "log_kurtosis_ratio_pi": 0.07004910707473755,
+            "mel_cepstral_distortion": 222.02438354492188,
+            "fw_snr_seg": 2.639733076095581,
+            "snr": 11.113384246826172,
+            "spectral_centroid_shift": 190.11138916015625,
+            "si-snr": 10.988937377929688,
+            "stft_loss": 0.05881449952721596,
+            "stft_magnitude_loss": 0.01908312924206257,
+            "mel_stft_loss": 3.5643467903137207,
+            "si-sdr": 10.988937377929688
+          }
+        }
+      }
+    },
+    "mean_shift": {
+      "render_info": {
+        "num_chunks": 13,
+        "chunk_size_samples": 65536,
+        "hop_size_samples": 32768,
+        "transport_scale": 1.0,
+        "bucket_ids": null,
+        "adaptation_modes": [
+          "direct_reshape"
+        ]
+      },
+      "audio_report": {
+        "audio_descriptors": {
+          "spectral_centroid": 1324.884521484375,
+          "spectral_bandwidth": 2585.698486328125,
+          "spectral_rolloff": 1908.5347900390625,
+          "spectral_flatness": 0.07965388149023056,
+          "highband_ratio": 0.051768139004707336,
+          "loudness_rms": 0.021070314571261406
+        },
+        "audio_vs_raw_clean": {
+          "waveform_mse": 3.430923607083969e-05,
+          "snr_db": 10.553010940551758,
+          "si_sdr": 10.805635452270508,
+          "stft_l1": 0.024491455405950546,
+          "spectral_centroid_shift": 144.0767822265625
+        },
+        "audio_vs_raw_clean_eval": {
+          "sispec": 14.53107738494873,
+          "lsd": 1.082280158996582,
+          "log_kurtosis_ratio": 0.00781614426523447,
+          "log_kurtosis_ratio_pi": 0.062323279678821564,
+          "mel_cepstral_distortion": 197.05490112304688,
+          "fw_snr_seg": 2.2492995262145996,
+          "snr": 10.553010940551758,
+          "spectral_centroid_shift": 157.1011962890625,
+          "si-snr": 10.807472229003906,
+          "stft_loss": 0.05840093269944191,
+          "stft_magnitude_loss": 0.017918867990374565,
+          "mel_stft_loss": 1.0141140222549438,
+          "si-sdr": 10.807472229003906
+        },
+        "audio_vs_decoded_clean": {
+          "waveform_mse": 1.4375027603819035e-05,
+          "snr_db": 15.220844268798828,
+          "si_sdr": 15.158079147338867,
+          "stft_l1": 0.01767418533563614,
+          "spectral_centroid_shift": 293.12060546875
+        },
+        "audio_vs_decoded_clean_eval": {
+          "sispec": 17.064189910888672,
+          "lsd": 1.394263505935669,
+          "log_kurtosis_ratio": 0.045335035771131516,
+          "log_kurtosis_ratio_pi": 0.04455815628170967,
+          "mel_cepstral_distortion": 121.36322021484375,
+          "fw_snr_seg": -0.8568788170814514,
+          "snr": 15.220844268798828,
+          "spectral_centroid_shift": 294.3507995605469,
+          "si-snr": 15.159186363220215,
+          "stft_loss": 0.03885847330093384,
+          "stft_magnitude_loss": 0.013359218835830688,
+          "mel_stft_loss": 1.0996875762939453,
+          "si-sdr": 15.159186363220215
+        }
+      },
+      "clean_lowband_hybrid": {
+        "cutoff_freq": 4000.0,
+        "filename": "mean_shift_clean_lowband.wav",
+        "audio_report": {
+          "audio_descriptors": {
+            "spectral_centroid": 1373.8514404296875,
+            "spectral_bandwidth": 2609.158935546875,
+            "spectral_rolloff": 2047.8077392578125,
+            "spectral_flatness": 0.08372563868761063,
+            "highband_ratio": 0.05257077515125275,
+            "loudness_rms": 0.01973489299416542
+          },
+          "audio_vs_raw_clean": {
+            "waveform_mse": 5.392719799601764e-07,
+            "snr_db": 28.589200973510742,
+            "si_sdr": 28.58379364013672,
+            "stft_l1": 0.0031897714361548424,
+            "spectral_centroid_shift": 193.043701171875
+          },
+          "audio_vs_raw_clean_eval": {
+            "sispec": 31.526817321777344,
+            "lsd": 1.0116379261016846,
+            "log_kurtosis_ratio": 0.0003723599365912378,
+            "log_kurtosis_ratio_pi": 0.0006032167002558708,
+            "mel_cepstral_distortion": 66.18199920654297,
+            "fw_snr_seg": 34.84880065917969,
+            "snr": 28.589200973510742,
+            "spectral_centroid_shift": 195.7632598876953,
+            "si-snr": 28.58371925354004,
+            "stft_loss": 0.007692407816648483,
+            "stft_magnitude_loss": 0.0022846630308777094,
+            "mel_stft_loss": 0.5836483240127563,
+            "si-sdr": 28.58371925354004
+          },
+          "audio_vs_decoded_clean": {
+            "waveform_mse": 3.6832196201430634e-05,
+            "snr_db": 11.133695602416992,
+            "si_sdr": 11.01137924194336,
+            "stft_l1": 0.02501392737030983,
+            "spectral_centroid_shift": 342.0875244140625
+          },
+          "audio_vs_decoded_clean_eval": {
+            "sispec": 14.86184024810791,
+            "lsd": 1.4068455696105957,
+            "log_kurtosis_ratio": 0.05277872830629349,
+            "log_kurtosis_ratio_pi": 0.06933112442493439,
+            "mel_cepstral_distortion": 164.74923706054688,
+            "fw_snr_seg": -1.4243444204330444,
+            "snr": 11.133695602416992,
+            "spectral_centroid_shift": 342.1960144042969,
+            "si-snr": 11.011835098266602,
+            "stft_loss": 0.058727819472551346,
+            "stft_magnitude_loss": 0.018624596297740936,
+            "mel_stft_loss": 1.1833217144012451,
+            "si-sdr": 11.011835098266602
+          }
+        }
+      }
+    },
+    "local_mean": {
+      "render_info": {
+        "num_chunks": 13,
+        "chunk_size_samples": 65536,
+        "hop_size_samples": 32768,
+        "transport_scale": 1.0,
+        "bucket_ids": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "adaptation_modes": [
+          "direct_reshape"
+        ]
+      },
+      "audio_report": {
+        "audio_descriptors": {
+          "spectral_centroid": 1182.406494140625,
+          "spectral_bandwidth": 2413.46728515625,
+          "spectral_rolloff": 1648.552490234375,
+          "spectral_flatness": 0.0665629506111145,
+          "highband_ratio": 0.039167240262031555,
+          "loudness_rms": 0.02151111327111721
+        },
+        "audio_vs_raw_clean": {
+          "waveform_mse": 3.514951458782889e-05,
+          "snr_db": 10.447964668273926,
+          "si_sdr": 10.976243019104004,
+          "stft_l1": 0.024396700784564018,
+          "spectral_centroid_shift": 1.5987548828125
+        },
+        "audio_vs_raw_clean_eval": {
+          "sispec": 14.669432640075684,
+          "lsd": 1.0542749166488647,
+          "log_kurtosis_ratio": 0.01610613986849785,
+          "log_kurtosis_ratio_pi": 0.07329416275024414,
+          "mel_cepstral_distortion": 214.8861541748047,
+          "fw_snr_seg": 3.3372180461883545,
+          "snr": 10.447964668273926,
+          "spectral_centroid_shift": 88.73274230957031,
+          "si-snr": 10.978499412536621,
+          "stft_loss": 0.057541318237781525,
+          "stft_magnitude_loss": 0.01799008436501026,
+          "mel_stft_loss": 1.0331848859786987,
+          "si-sdr": 10.978499412536621
+        },
+        "audio_vs_decoded_clean": {
+          "waveform_mse": 1.420391708961688e-05,
+          "snr_db": 15.272979736328125,
+          "si_sdr": 15.142333984375,
+          "stft_l1": 0.01753895916044712,
+          "spectral_centroid_shift": 150.642578125
+        },
+        "audio_vs_decoded_clean_eval": {
+          "sispec": 17.365886688232422,
+          "lsd": 1.3632733821868896,
+          "log_kurtosis_ratio": 0.06925716251134872,
+          "log_kurtosis_ratio_pi": 0.07095097750425339,
+          "mel_cepstral_distortion": 127.72929382324219,
+          "fw_snr_seg": 0.3740543723106384,
+          "snr": 15.272979736328125,
+          "spectral_centroid_shift": 164.41525268554688,
+          "si-snr": 15.143872261047363,
+          "stft_loss": 0.038848575204610825,
+          "stft_magnitude_loss": 0.01313881017267704,
+          "mel_stft_loss": 1.0894211530685425,
+          "si-sdr": 15.143872261047363
+        }
+      },
+      "clean_lowband_hybrid": {
+        "cutoff_freq": 4000.0,
+        "filename": "local_mean_clean_lowband.wav",
+        "audio_report": {
+          "audio_descriptors": {
+            "spectral_centroid": 1273.97705078125,
+            "spectral_bandwidth": 2444.962158203125,
+            "spectral_rolloff": 1921.0091552734375,
+            "spectral_flatness": 0.07109317928552628,
+            "highband_ratio": 0.039951883256435394,
+            "loudness_rms": 0.019732411950826645
+          },
+          "audio_vs_raw_clean": {
+            "waveform_mse": 4.4083660100113775e-07,
+            "snr_db": 29.46548843383789,
+            "si_sdr": 29.46070098876953,
+            "stft_l1": 0.0028239693492650986,
+            "spectral_centroid_shift": 93.1693115234375
+          },
+          "audio_vs_raw_clean_eval": {
+            "sispec": 31.594707489013672,
+            "lsd": 0.9777045845985413,
+            "log_kurtosis_ratio": 0.0006036195554770529,
+            "log_kurtosis_ratio_pi": 0.0005448912270367146,
+            "mel_cepstral_distortion": 99.73893737792969,
+            "fw_snr_seg": 34.69688034057617,
+            "snr": 29.46548843383789,
+            "spectral_centroid_shift": 108.98714447021484,
+            "si-snr": 29.460628509521484,
+            "stft_loss": 0.006747606210410595,
+            "stft_magnitude_loss": 0.0020514465868473053,
+            "mel_stft_loss": 0.5787176489830017,
+            "si-sdr": 29.460628509521484
+          },
+          "audio_vs_decoded_clean": {
+            "waveform_mse": 3.6932640796294436e-05,
+            "snr_db": 11.121879577636719,
+            "si_sdr": 10.998031616210938,
+            "stft_l1": 0.02490474283695221,
+            "spectral_centroid_shift": 242.213134765625
+          },
+          "audio_vs_decoded_clean_eval": {
+            "sispec": 14.845842361450195,
+            "lsd": 1.3724957704544067,
+            "log_kurtosis_ratio": 0.052547454833984375,
+            "log_kurtosis_ratio_pi": 0.06924371421337128,
+            "mel_cepstral_distortion": 183.55906677246094,
+            "fw_snr_seg": -0.1673530638217926,
+            "snr": 11.121879577636719,
+            "spectral_centroid_shift": 245.20138549804688,
+            "si-snr": 10.99848747253418,
+            "stft_loss": 0.058637287467718124,
+            "stft_magnitude_loss": 0.018556226044893265,
+            "mel_stft_loss": 1.1510956287384033,
+            "si-sdr": 10.99848747253418
+          }
+        }
+      }
+    }
+  },
+  "replace_below_cutoff_with_clean": true,
+  "replace_below_cutoff_freq": 4000.0
+}

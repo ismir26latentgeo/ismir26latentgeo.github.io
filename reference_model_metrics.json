@@ -1,0 +1,861 @@
+{
+  "rows": [
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "ground_truth",
+      "label": "GT",
+      "relative_wav_path": "ground_truth/bwe_0_GT.wav",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "degraded",
+      "label": "Degraded",
+      "relative_wav_path": "degraded/bwe_0_Degraded.wav",
+      "lsd": 5.586267948150635,
+      "sispec": 16.70918083190918,
+      "si_sdr": 16.696775436401367
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "relative_wav_path": "audiosr/bwe_0_AudioSR.wav",
+      "lsd": 2.2212975025177,
+      "sispec": 13.016685485839844,
+      "si_sdr": 9.572243690490723
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "relative_wav_path": "cqtdiff/bwe_0_CQTDiff.wav",
+      "lsd": 3.295947790145874,
+      "sispec": 15.112468719482422,
+      "si_sdr": -16.396642684936523
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "relative_wav_path": "IBAR/bwe_0_IBAR.wav",
+      "lsd": 1.8421211242675781,
+      "sispec": 6.855706691741943,
+      "si_sdr": -32.1743049621582
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "relative_wav_path": "A2SB/bwe_0_A2SB_4split.wav",
+      "lsd": 1.6115697622299194,
+      "sispec": 18.370452880859375,
+      "si_sdr": 14.809574127197266
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "relative_wav_path": "mean_shift/bwe_0_mean_shift.wav",
+      "lsd": 1.8652464151382446,
+      "sispec": 12.999942779541016,
+      "si_sdr": 9.979141235351562
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "relative_wav_path": "mean_shift/bwe_0_local_mean.wav",
+      "lsd": 2.0011487007141113,
+      "sispec": 12.955286026000977,
+      "si_sdr": 9.973068237304688
+    },
+    {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "relative_wav_path": "mean_shift/bwe_0_local_mean_clean_lowband.wav",
+      "lsd": 1.9594981670379639,
+      "sispec": 17.6148738861084,
+      "si_sdr": 16.63377571105957
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "ground_truth",
+      "label": "GT",
+      "relative_wav_path": "ground_truth/bwe_1_GT.wav",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "degraded",
+      "label": "Degraded",
+      "relative_wav_path": "degraded/bwe_1_Degraded.wav",
+      "lsd": 4.167448043823242,
+      "sispec": 20.20168113708496,
+      "si_sdr": 20.191463470458984
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "relative_wav_path": "audiosr/bwe_1_AudioSR.wav",
+      "lsd": 1.953150987625122,
+      "sispec": 10.578056335449219,
+      "si_sdr": 9.071358680725098
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "relative_wav_path": "cqtdiff/bwe_1_CQTDiff.wav",
+      "lsd": 2.1079633235931396,
+      "sispec": 13.702579498291016,
+      "si_sdr": -16.633216857910156
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "relative_wav_path": "IBAR/bwe_1_IBAR.wav",
+      "lsd": 1.7018990516662598,
+      "sispec": 2.0783166885375977,
+      "si_sdr": -34.45365524291992
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "relative_wav_path": "A2SB/bwe_1_A2SB_4split.wav",
+      "lsd": 1.8320711851119995,
+      "sispec": 21.151809692382812,
+      "si_sdr": 17.89278793334961
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "relative_wav_path": "mean_shift/bwe_1_mean_shift.wav",
+      "lsd": 1.9976872205734253,
+      "sispec": 17.592967987060547,
+      "si_sdr": 14.977689743041992
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "relative_wav_path": "mean_shift/bwe_1_local_mean.wav",
+      "lsd": 2.1121745109558105,
+      "sispec": 17.572235107421875,
+      "si_sdr": 15.07530689239502
+    },
+    {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "relative_wav_path": "mean_shift/bwe_1_local_mean_clean_lowband.wav",
+      "lsd": 2.078880548477173,
+      "sispec": 20.79279136657715,
+      "si_sdr": 20.161277770996094
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "ground_truth",
+      "label": "GT",
+      "relative_wav_path": "ground_truth/bwe_2_GT.wav",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "degraded",
+      "label": "Degraded",
+      "relative_wav_path": "degraded/bwe_2_Degraded.wav",
+      "lsd": 2.5836246013641357,
+      "sispec": 29.339502334594727,
+      "si_sdr": 29.32499885559082
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "relative_wav_path": "audiosr/bwe_2_AudioSR.wav",
+      "lsd": 1.537705421447754,
+      "sispec": 23.54337501525879,
+      "si_sdr": 20.746051788330078
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "relative_wav_path": "cqtdiff/bwe_2_CQTDiff.wav",
+      "lsd": 1.692931056022644,
+      "sispec": 16.57894515991211,
+      "si_sdr": -10.64554214477539
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "relative_wav_path": "IBAR/bwe_2_IBAR.wav",
+      "lsd": 1.3243892192840576,
+      "sispec": 10.425464630126953,
+      "si_sdr": -19.17513084411621
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "relative_wav_path": "A2SB/bwe_2_A2SB_4split.wav",
+      "lsd": 1.2507988214492798,
+      "sispec": 30.285966873168945,
+      "si_sdr": 28.779489517211914
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "relative_wav_path": "mean_shift/bwe_2_mean_shift.wav",
+      "lsd": 1.036573052406311,
+      "sispec": 13.40914535522461,
+      "si_sdr": 9.457274436950684
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "relative_wav_path": "mean_shift/bwe_2_local_mean.wav",
+      "lsd": 0.9365177750587463,
+      "sispec": 13.43901252746582,
+      "si_sdr": 9.52311897277832
+    },
+    {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "relative_wav_path": "mean_shift/bwe_2_local_mean_clean_lowband.wav",
+      "lsd": 0.84090256690979,
+      "sispec": 30.612403869628906,
+      "si_sdr": 29.27505874633789
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "ground_truth",
+      "label": "GT",
+      "relative_wav_path": "ground_truth/bwe_4_GT.wav",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "degraded",
+      "label": "Degraded",
+      "relative_wav_path": "degraded/bwe_4_Degraded.wav",
+      "lsd": 3.063385486602783,
+      "sispec": 32.69206619262695,
+      "si_sdr": 32.671119689941406
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "relative_wav_path": "audiosr/bwe_4_AudioSR.wav",
+      "lsd": 1.8667975664138794,
+      "sispec": 17.868362426757812,
+      "si_sdr": 16.45169448852539
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "relative_wav_path": "cqtdiff/bwe_4_CQTDiff.wav",
+      "lsd": 1.6922070980072021,
+      "sispec": 20.276569366455078,
+      "si_sdr": -33.712913513183594
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "relative_wav_path": "IBAR/bwe_4_IBAR.wav",
+      "lsd": 1.4587959051132202,
+      "sispec": 7.693471908569336,
+      "si_sdr": -24.37045669555664
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "relative_wav_path": "A2SB/bwe_4_A2SB_4split.wav",
+      "lsd": 1.4850795269012451,
+      "sispec": 33.56126403808594,
+      "si_sdr": 32.37857437133789
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "relative_wav_path": "mean_shift/bwe_4_mean_shift.wav",
+      "lsd": 1.1362371444702148,
+      "sispec": 16.05834197998047,
+      "si_sdr": 12.890137672424316
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "relative_wav_path": "mean_shift/bwe_4_local_mean.wav",
+      "lsd": 1.034232497215271,
+      "sispec": 16.148679733276367,
+      "si_sdr": 12.94498062133789
+    },
+    {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "relative_wav_path": "mean_shift/bwe_4_local_mean_clean_lowband.wav",
+      "lsd": 0.9586771726608276,
+      "sispec": 33.675716400146484,
+      "si_sdr": 31.15005111694336
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "ground_truth",
+      "label": "GT",
+      "relative_wav_path": "ground_truth/bwe_5_GT.wav",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "degraded",
+      "label": "Degraded",
+      "relative_wav_path": "degraded/bwe_5_Degraded.wav",
+      "lsd": 2.075183153152466,
+      "sispec": 29.773290634155273,
+      "si_sdr": 29.74330711364746
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "relative_wav_path": "audiosr/bwe_5_AudioSR.wav",
+      "lsd": 1.899301528930664,
+      "sispec": 22.11094856262207,
+      "si_sdr": 18.513519287109375
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "relative_wav_path": "cqtdiff/bwe_5_CQTDiff.wav",
+      "lsd": 1.39926278591156,
+      "sispec": 19.942338943481445,
+      "si_sdr": -10.273165702819824
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "relative_wav_path": "IBAR/bwe_5_IBAR.wav",
+      "lsd": 1.1657055616378784,
+      "sispec": 11.467823028564453,
+      "si_sdr": -50.76101303100586
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "relative_wav_path": "A2SB/bwe_5_A2SB_4split.wav",
+      "lsd": 1.594751000404358,
+      "sispec": 28.5256404876709,
+      "si_sdr": 27.639591217041016
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "relative_wav_path": "mean_shift/bwe_5_mean_shift.wav",
+      "lsd": 1.0822746753692627,
+      "sispec": 14.532001495361328,
+      "si_sdr": 10.807472229003906
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "relative_wav_path": "mean_shift/bwe_5_local_mean.wav",
+      "lsd": 1.0542677640914917,
+      "sispec": 14.670303344726562,
+      "si_sdr": 10.978500366210938
+    },
+    {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "relative_wav_path": "mean_shift/bwe_5_local_mean_clean_lowband.wav",
+      "lsd": 0.9776952266693115,
+      "sispec": 31.596115112304688,
+      "si_sdr": 29.460628509521484
+    }
+  ],
+  "by_relative_wav_path": {
+    "ground_truth/bwe_0_GT.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "ground_truth",
+      "label": "GT",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    "degraded/bwe_0_Degraded.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "degraded",
+      "label": "Degraded",
+      "lsd": 5.586267948150635,
+      "sispec": 16.70918083190918,
+      "si_sdr": 16.696775436401367
+    },
+    "audiosr/bwe_0_AudioSR.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "lsd": 2.2212975025177,
+      "sispec": 13.016685485839844,
+      "si_sdr": 9.572243690490723
+    },
+    "cqtdiff/bwe_0_CQTDiff.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "lsd": 3.295947790145874,
+      "sispec": 15.112468719482422,
+      "si_sdr": -16.396642684936523
+    },
+    "IBAR/bwe_0_IBAR.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "lsd": 1.8421211242675781,
+      "sispec": 6.855706691741943,
+      "si_sdr": -32.1743049621582
+    },
+    "A2SB/bwe_0_A2SB_4split.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "lsd": 1.6115697622299194,
+      "sispec": 18.370452880859375,
+      "si_sdr": 14.809574127197266
+    },
+    "mean_shift/bwe_0_mean_shift.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "lsd": 1.8652464151382446,
+      "sispec": 12.999942779541016,
+      "si_sdr": 9.979141235351562
+    },
+    "mean_shift/bwe_0_local_mean.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "lsd": 2.0011487007141113,
+      "sispec": 12.955286026000977,
+      "si_sdr": 9.973068237304688
+    },
+    "mean_shift/bwe_0_local_mean_clean_lowband.wav": {
+      "example_id": "0",
+      "example_key": "bwe_0",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "lsd": 1.9594981670379639,
+      "sispec": 17.6148738861084,
+      "si_sdr": 16.63377571105957
+    },
+    "ground_truth/bwe_1_GT.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "ground_truth",
+      "label": "GT",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    "degraded/bwe_1_Degraded.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "degraded",
+      "label": "Degraded",
+      "lsd": 4.167448043823242,
+      "sispec": 20.20168113708496,
+      "si_sdr": 20.191463470458984
+    },
+    "audiosr/bwe_1_AudioSR.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "lsd": 1.953150987625122,
+      "sispec": 10.578056335449219,
+      "si_sdr": 9.071358680725098
+    },
+    "cqtdiff/bwe_1_CQTDiff.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "lsd": 2.1079633235931396,
+      "sispec": 13.702579498291016,
+      "si_sdr": -16.633216857910156
+    },
+    "IBAR/bwe_1_IBAR.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "lsd": 1.7018990516662598,
+      "sispec": 2.0783166885375977,
+      "si_sdr": -34.45365524291992
+    },
+    "A2SB/bwe_1_A2SB_4split.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "lsd": 1.8320711851119995,
+      "sispec": 21.151809692382812,
+      "si_sdr": 17.89278793334961
+    },
+    "mean_shift/bwe_1_mean_shift.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "lsd": 1.9976872205734253,
+      "sispec": 17.592967987060547,
+      "si_sdr": 14.977689743041992
+    },
+    "mean_shift/bwe_1_local_mean.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "lsd": 2.1121745109558105,
+      "sispec": 17.572235107421875,
+      "si_sdr": 15.07530689239502
+    },
+    "mean_shift/bwe_1_local_mean_clean_lowband.wav": {
+      "example_id": "1",
+      "example_key": "bwe_1",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "lsd": 2.078880548477173,
+      "sispec": 20.79279136657715,
+      "si_sdr": 20.161277770996094
+    },
+    "ground_truth/bwe_2_GT.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "ground_truth",
+      "label": "GT",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    "degraded/bwe_2_Degraded.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "degraded",
+      "label": "Degraded",
+      "lsd": 2.5836246013641357,
+      "sispec": 29.339502334594727,
+      "si_sdr": 29.32499885559082
+    },
+    "audiosr/bwe_2_AudioSR.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "lsd": 1.537705421447754,
+      "sispec": 23.54337501525879,
+      "si_sdr": 20.746051788330078
+    },
+    "cqtdiff/bwe_2_CQTDiff.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "lsd": 1.692931056022644,
+      "sispec": 16.57894515991211,
+      "si_sdr": -10.64554214477539
+    },
+    "IBAR/bwe_2_IBAR.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "lsd": 1.3243892192840576,
+      "sispec": 10.425464630126953,
+      "si_sdr": -19.17513084411621
+    },
+    "A2SB/bwe_2_A2SB_4split.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "lsd": 1.2507988214492798,
+      "sispec": 30.285966873168945,
+      "si_sdr": 28.779489517211914
+    },
+    "mean_shift/bwe_2_mean_shift.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "lsd": 1.036573052406311,
+      "sispec": 13.40914535522461,
+      "si_sdr": 9.457274436950684
+    },
+    "mean_shift/bwe_2_local_mean.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "lsd": 0.9365177750587463,
+      "sispec": 13.43901252746582,
+      "si_sdr": 9.52311897277832
+    },
+    "mean_shift/bwe_2_local_mean_clean_lowband.wav": {
+      "example_id": "2",
+      "example_key": "bwe_2",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "lsd": 0.84090256690979,
+      "sispec": 30.612403869628906,
+      "si_sdr": 29.27505874633789
+    },
+    "ground_truth/bwe_4_GT.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "ground_truth",
+      "label": "GT",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    "degraded/bwe_4_Degraded.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "degraded",
+      "label": "Degraded",
+      "lsd": 3.063385486602783,
+      "sispec": 32.69206619262695,
+      "si_sdr": 32.671119689941406
+    },
+    "audiosr/bwe_4_AudioSR.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "lsd": 1.8667975664138794,
+      "sispec": 17.868362426757812,
+      "si_sdr": 16.45169448852539
+    },
+    "cqtdiff/bwe_4_CQTDiff.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "lsd": 1.6922070980072021,
+      "sispec": 20.276569366455078,
+      "si_sdr": -33.712913513183594
+    },
+    "IBAR/bwe_4_IBAR.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "lsd": 1.4587959051132202,
+      "sispec": 7.693471908569336,
+      "si_sdr": -24.37045669555664
+    },
+    "A2SB/bwe_4_A2SB_4split.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "lsd": 1.4850795269012451,
+      "sispec": 33.56126403808594,
+      "si_sdr": 32.37857437133789
+    },
+    "mean_shift/bwe_4_mean_shift.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "lsd": 1.1362371444702148,
+      "sispec": 16.05834197998047,
+      "si_sdr": 12.890137672424316
+    },
+    "mean_shift/bwe_4_local_mean.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "lsd": 1.034232497215271,
+      "sispec": 16.148679733276367,
+      "si_sdr": 12.94498062133789
+    },
+    "mean_shift/bwe_4_local_mean_clean_lowband.wav": {
+      "example_id": "4",
+      "example_key": "bwe_4",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "lsd": 0.9586771726608276,
+      "sispec": 33.675716400146484,
+      "si_sdr": 31.15005111694336
+    },
+    "ground_truth/bwe_5_GT.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "ground_truth",
+      "label": "GT",
+      "lsd": "",
+      "sispec": "",
+      "si_sdr": ""
+    },
+    "degraded/bwe_5_Degraded.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "degraded",
+      "label": "Degraded",
+      "lsd": 2.075183153152466,
+      "sispec": 29.773290634155273,
+      "si_sdr": 29.74330711364746
+    },
+    "audiosr/bwe_5_AudioSR.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "audiosr",
+      "label": "AudioSR",
+      "lsd": 1.899301528930664,
+      "sispec": 22.11094856262207,
+      "si_sdr": 18.513519287109375
+    },
+    "cqtdiff/bwe_5_CQTDiff.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "cqtdiff",
+      "label": "CQTDiff",
+      "lsd": 1.39926278591156,
+      "sispec": 19.942338943481445,
+      "si_sdr": -10.273165702819824
+    },
+    "IBAR/bwe_5_IBAR.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "IBAR",
+      "label": "IBAR",
+      "lsd": 1.1657055616378784,
+      "sispec": 11.467823028564453,
+      "si_sdr": -50.76101303100586
+    },
+    "A2SB/bwe_5_A2SB_4split.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "A2SB",
+      "label": "A2SB (4-split)",
+      "lsd": 1.594751000404358,
+      "sispec": 28.5256404876709,
+      "si_sdr": 27.639591217041016
+    },
+    "mean_shift/bwe_5_mean_shift.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "mean_shift",
+      "label": "Mean Shift",
+      "lsd": 1.0822746753692627,
+      "sispec": 14.532001495361328,
+      "si_sdr": 10.807472229003906
+    },
+    "mean_shift/bwe_5_local_mean.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "mean_shift",
+      "label": "Local Mean",
+      "lsd": 1.0542677640914917,
+      "sispec": 14.670303344726562,
+      "si_sdr": 10.978500366210938
+    },
+    "mean_shift/bwe_5_local_mean_clean_lowband.wav": {
+      "example_id": "5",
+      "example_key": "bwe_5",
+      "folder": "mean_shift",
+      "label": "Local Mean with Clean Lowband",
+      "lsd": 0.9776952266693115,
+      "sispec": 31.596115112304688,
+      "si_sdr": 29.460628509521484
+    }
+  }
+}
