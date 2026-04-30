@@ -666,80 +666,6 @@
       <a href="#listening-examples">Listening examples</a>
     </nav>
     
-    <section class="summary-panel">
-      <div class="summary-copy">
-        <h2>Overall Snapshot</h2>
-        <p>This page combines five matched listening examples with shared posthoc raw-clean metrics computed directly from the WAV outputs against ground truth, with the listening section focused on published baselines plus the mean-shift transport variants.</p>
-        <ul class="summary-notes">
-          <li><strong>Focus:</strong> the audio grids below now keep the published baselines together with the mean-shift transport family and drop the older local-mean variants.</li><li><strong>Transport baseline:</strong> <strong>Mean Shift</strong> remains the zero-parameter reference across VAE, CodiCodec, DAC, and Encodec for these five examples.</li><li><strong>Reading guide:</strong> lower LSD is better, while higher SiSpec and SI-SDR are better. In practice, LSD plus listening tends to be the most stable signal for this BWE subset.</li>
-        </ul>
-      </div>
-      <div class="summary-table-wrap">
-        <table class="summary-table">
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>N</th>
-              <th>LSD ↓</th>
-              <th>SiSpec ↑</th>
-              <th>SI-SDR ↑</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr>
-              <td>Mean Shift</td>
-              <td>5</td>
-              <td>1.42</td>
-              <td>14.92</td>
-              <td>11.62</td>
-            </tr>
-            
-            <tr>
-              <td><div class="summary-method"><span>IBAR</span><span class="summary-actions"><a class="mini-link" href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2501.11311" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
-              <td>5</td>
-              <td>1.50</td>
-              <td>7.70</td>
-              <td>-32.19</td>
-            </tr>
-            
-            <tr>
-              <td><div class="summary-method"><span>A2SB (4-split)</span><span class="summary-actions"><a class="mini-link" href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2501.11311" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
-              <td>5</td>
-              <td>1.55</td>
-              <td>26.38</td>
-              <td>24.30</td>
-            </tr>
-            
-            <tr>
-              <td><div class="summary-method"><span>AudioSR</span><span class="summary-actions"><a class="mini-link" href="https://audioldm.github.io/audiosr/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2309.07314" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
-              <td>5</td>
-              <td>1.90</td>
-              <td>17.42</td>
-              <td>14.87</td>
-            </tr>
-            
-            <tr>
-              <td><div class="summary-method"><span>CQTDiff</span><span class="summary-actions"><a class="mini-link" href="http://research.spa.aalto.fi/publications/papers/icassp23-cqt-diff/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2210.15228" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
-              <td>5</td>
-              <td>2.04</td>
-              <td>17.12</td>
-              <td>-17.53</td>
-            </tr>
-            
-            <tr>
-              <td>Degraded</td>
-              <td>5</td>
-              <td>3.50</td>
-              <td>25.74</td>
-              <td>25.73</td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
-    </section>
-
     <div class="section-anchor" id="paper-results"></div>
     <section class="paper-results">
       <h2>Paper Materials</h2>
@@ -915,6 +841,69 @@
       <p class="listening-intro">These matched examples combine clean, degraded, published baseline, and transport-based outputs so we can compare restoration behavior both by ear and by spectrogram. The original transport cards on this page, <strong>Mean Shift</strong> and <strong>Local Mean</strong>, are computed in the latent space of the <strong>Stable Audio Open VAE</strong>. <strong>Local Mean with Clean Lowband</strong> uses the same local-mean restoration, except that content below the 4\,kHz cutoff is replaced by the original clean signal.</p>
       <p class="listening-intro">Each example now also includes audio-only saved-transport renders for <strong>CodiCodec</strong>, <strong>DAC</strong>, and <strong>Encodec</strong> using the <strong>MTD 4 kHz</strong> transport vectors. Those added codec cards reuse the same degraded and clean excerpts but do not yet have dedicated spectrogram images embedded in the page.</p>
       <p class="listening-note"><strong>Audio example source.</strong> The listening examples on this page are taken from the <a href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">A2SB demo website</a>.</p>
+      <section class="summary-panel">
+        <div class="summary-header">
+          <h2>Five-Example Listening Summary</h2>
+          <p>Mean raw-clean metrics aggregated over the five matched listening examples shown below: <code>bwe_0</code>, <code>bwe_1</code>, <code>bwe_2</code>, <code>bwe_4</code>, and <code>bwe_5</code>.</p>
+        </div>
+        <div class="summary-table-wrap">
+          <table class="summary-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>N</th>
+                <th>LSD ↓</th>
+                <th>SiSpec ↑</th>
+                <th>ViSQOL ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mean Shift</td>
+                <td>5</td>
+                <td><strong>1.43</strong></td>
+                <td>14.96</td>
+                <td>2.66</td>
+              </tr>
+              <tr>
+                <td><div class="summary-method"><span>IBAR</span><span class="summary-actions"><a class="mini-link" href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2501.11311" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
+                <td>5</td>
+                <td>1.50</td>
+                <td>7.70</td>
+                <td>2.88</td>
+              </tr>
+              <tr>
+                <td><div class="summary-method"><span>A2SB (4-split)</span><span class="summary-actions"><a class="mini-link" href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2501.11311" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
+                <td>5</td>
+                <td>1.55</td>
+                <td><strong>26.38</strong></td>
+                <td><strong>3.08</strong></td>
+              </tr>
+              <tr>
+                <td><div class="summary-method"><span>AudioSR</span><span class="summary-actions"><a class="mini-link" href="https://audioldm.github.io/audiosr/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2309.07314" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
+                <td>5</td>
+                <td>1.90</td>
+                <td>17.42</td>
+                <td>2.84</td>
+              </tr>
+              <tr>
+                <td><div class="summary-method"><span>CQTDiff</span><span class="summary-actions"><a class="mini-link" href="http://research.spa.aalto.fi/publications/papers/icassp23-cqt-diff/" target="_blank" rel="noopener noreferrer">link</a><a class="mini-link" href="https://arxiv.org/abs/2210.15228" target="_blank" rel="noopener noreferrer">paper</a></span></div></td>
+                <td>5</td>
+                <td>2.04</td>
+                <td>17.12</td>
+                <td>1.86</td>
+              </tr>
+              <tr>
+                <td>Degraded</td>
+                <td>5</td>
+                <td>3.50</td>
+                <td>25.74</td>
+                <td>2.45</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
             <section class="example">
               <div class="example-head">
                 <div>
@@ -941,7 +930,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_Degraded.png" alt="Spectrogram for Degraded">
                   <audio controls preload="none" src="degraded/bwe_0_Degraded.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 5.59</span><span class="metric"><span class="metric-label">SiSpec</span> 16.71</span><span class="metric"><span class="metric-label">SI-SDR</span> 16.70</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 5.59</span><span class="metric"><span class="metric-label">SiSpec</span> 16.71</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.45</span></div>
                 </div>
                 
                 <div class="card">
@@ -951,7 +940,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_AudioSR.png" alt="Spectrogram for AudioSR">
                   <audio controls preload="none" src="audiosr/bwe_0_AudioSR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.22</span><span class="metric"><span class="metric-label">SiSpec</span> 13.02</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.57</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.22</span><span class="metric"><span class="metric-label">SiSpec</span> 13.02</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.13</span></div>
                 </div>
                 
                 <div class="card">
@@ -961,7 +950,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_CQTDiff.png" alt="Spectrogram for CQTDiff">
                   <audio controls preload="none" src="cqtdiff/bwe_0_CQTDiff.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 3.30</span><span class="metric"><span class="metric-label">SiSpec</span> 15.11</span><span class="metric"><span class="metric-label">SI-SDR</span> -16.40</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 3.30</span><span class="metric"><span class="metric-label">SiSpec</span> 15.11</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.87</span></div>
                 </div>
                 
                 <div class="card">
@@ -971,7 +960,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_IBAR.png" alt="Spectrogram for IBAR">
                   <audio controls preload="none" src="IBAR/bwe_0_IBAR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.84</span><span class="metric"><span class="metric-label">SiSpec</span> 6.86</span><span class="metric"><span class="metric-label">SI-SDR</span> -32.17</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.84</span><span class="metric"><span class="metric-label">SiSpec</span> 6.86</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.05</span></div>
                 </div>
                 
                 <div class="card">
@@ -981,7 +970,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_A2SB_4split.png" alt="Spectrogram for A2SB (4-split)">
                   <audio controls preload="none" src="A2SB/bwe_0_A2SB_4split.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.61</span><span class="metric"><span class="metric-label">SiSpec</span> 18.37</span><span class="metric"><span class="metric-label">SI-SDR</span> 14.81</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.61</span><span class="metric"><span class="metric-label">SiSpec</span> 18.37</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.08</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -991,7 +980,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_0_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.78</span><span class="metric"><span class="metric-label">SiSpec</span> 13.21</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.69</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.78</span><span class="metric"><span class="metric-label">SiSpec</span> 13.21</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.37</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1001,7 +990,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_0_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.64</span><span class="metric"><span class="metric-label">SiSpec</span> 13.28</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.62</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.64</span><span class="metric"><span class="metric-label">SiSpec</span> 13.28</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.45</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1011,7 +1000,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_0_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_0_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.58</span><span class="metric"><span class="metric-label">SiSpec</span> 18.42</span><span class="metric"><span class="metric-label">SI-SDR</span> 15.44</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.58</span><span class="metric"><span class="metric-label">SiSpec</span> 18.42</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.48</span></div>
                 </div>
 
                 <div class="card transport-card">
@@ -1133,7 +1122,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_Degraded.png" alt="Spectrogram for Degraded">
                   <audio controls preload="none" src="degraded/bwe_1_Degraded.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 4.17</span><span class="metric"><span class="metric-label">SiSpec</span> 20.20</span><span class="metric"><span class="metric-label">SI-SDR</span> 20.19</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 4.17</span><span class="metric"><span class="metric-label">SiSpec</span> 20.20</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.56</span></div>
                 </div>
                 
                 <div class="card">
@@ -1143,7 +1132,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_AudioSR.png" alt="Spectrogram for AudioSR">
                   <audio controls preload="none" src="audiosr/bwe_1_AudioSR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.95</span><span class="metric"><span class="metric-label">SiSpec</span> 10.58</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.07</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.95</span><span class="metric"><span class="metric-label">SiSpec</span> 10.58</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.91</span></div>
                 </div>
                 
                 <div class="card">
@@ -1153,7 +1142,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_CQTDiff.png" alt="Spectrogram for CQTDiff">
                   <audio controls preload="none" src="cqtdiff/bwe_1_CQTDiff.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.11</span><span class="metric"><span class="metric-label">SiSpec</span> 13.70</span><span class="metric"><span class="metric-label">SI-SDR</span> -16.63</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.11</span><span class="metric"><span class="metric-label">SiSpec</span> 13.70</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.85</span></div>
                 </div>
                 
                 <div class="card">
@@ -1163,7 +1152,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_IBAR.png" alt="Spectrogram for IBAR">
                   <audio controls preload="none" src="IBAR/bwe_1_IBAR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.70</span><span class="metric"><span class="metric-label">SiSpec</span> 2.08</span><span class="metric"><span class="metric-label">SI-SDR</span> -34.45</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.70</span><span class="metric"><span class="metric-label">SiSpec</span> 2.08</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.12</span></div>
                 </div>
                 
                 <div class="card">
@@ -1173,7 +1162,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_A2SB_4split.png" alt="Spectrogram for A2SB (4-split)">
                   <audio controls preload="none" src="A2SB/bwe_1_A2SB_4split.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.83</span><span class="metric"><span class="metric-label">SiSpec</span> 21.15</span><span class="metric"><span class="metric-label">SI-SDR</span> 17.89</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.83</span><span class="metric"><span class="metric-label">SiSpec</span> 21.15</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.61</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1183,7 +1172,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_1_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.51</span><span class="metric"><span class="metric-label">SiSpec</span> 17.82</span><span class="metric"><span class="metric-label">SI-SDR</span> 14.80</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.51</span><span class="metric"><span class="metric-label">SiSpec</span> 17.82</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.38</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1193,7 +1182,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_1_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.50</span><span class="metric"><span class="metric-label">SiSpec</span> 17.82</span><span class="metric"><span class="metric-label">SI-SDR</span> 14.72</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.50</span><span class="metric"><span class="metric-label">SiSpec</span> 17.82</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.42</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1203,7 +1192,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_1_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_1_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.45</span><span class="metric"><span class="metric-label">SiSpec</span> 21.68</span><span class="metric"><span class="metric-label">SI-SDR</span> 19.71</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.45</span><span class="metric"><span class="metric-label">SiSpec</span> 21.68</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.51</span></div>
                 </div>
 
                 <div class="card transport-card">
@@ -1325,7 +1314,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_Degraded.png" alt="Spectrogram for Degraded">
                   <audio controls preload="none" src="degraded/bwe_2_Degraded.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.58</span><span class="metric"><span class="metric-label">SiSpec</span> 29.34</span><span class="metric"><span class="metric-label">SI-SDR</span> 29.32</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.58</span><span class="metric"><span class="metric-label">SiSpec</span> 29.34</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.08</span></div>
                 </div>
                 
                 <div class="card">
@@ -1335,7 +1324,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_AudioSR.png" alt="Spectrogram for AudioSR">
                   <audio controls preload="none" src="audiosr/bwe_2_AudioSR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.54</span><span class="metric"><span class="metric-label">SiSpec</span> 23.54</span><span class="metric"><span class="metric-label">SI-SDR</span> 20.75</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.54</span><span class="metric"><span class="metric-label">SiSpec</span> 23.54</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.13</span></div>
                 </div>
                 
                 <div class="card">
@@ -1345,7 +1334,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_CQTDiff.png" alt="Spectrogram for CQTDiff">
                   <audio controls preload="none" src="cqtdiff/bwe_2_CQTDiff.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.69</span><span class="metric"><span class="metric-label">SiSpec</span> 16.58</span><span class="metric"><span class="metric-label">SI-SDR</span> -10.65</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.69</span><span class="metric"><span class="metric-label">SiSpec</span> 16.58</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.67</span></div>
                 </div>
                 
                 <div class="card">
@@ -1355,7 +1344,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_IBAR.png" alt="Spectrogram for IBAR">
                   <audio controls preload="none" src="IBAR/bwe_2_IBAR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.32</span><span class="metric"><span class="metric-label">SiSpec</span> 10.43</span><span class="metric"><span class="metric-label">SI-SDR</span> -19.18</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.32</span><span class="metric"><span class="metric-label">SiSpec</span> 10.43</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.19</span></div>
                 </div>
                 
                 <div class="card">
@@ -1365,7 +1354,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_A2SB_4split.png" alt="Spectrogram for A2SB (4-split)">
                   <audio controls preload="none" src="A2SB/bwe_2_A2SB_4split.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.25</span><span class="metric"><span class="metric-label">SiSpec</span> 30.29</span><span class="metric"><span class="metric-label">SI-SDR</span> 28.78</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.25</span><span class="metric"><span class="metric-label">SiSpec</span> 30.29</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.27</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1375,7 +1364,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_2_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.04</span><span class="metric"><span class="metric-label">SiSpec</span> 13.41</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.46</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.04</span><span class="metric"><span class="metric-label">SiSpec</span> 13.41</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.58</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1385,7 +1374,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_2_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.94</span><span class="metric"><span class="metric-label">SiSpec</span> 13.44</span><span class="metric"><span class="metric-label">SI-SDR</span> 9.52</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.94</span><span class="metric"><span class="metric-label">SiSpec</span> 13.44</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.23</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1395,7 +1384,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_2_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_2_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.84</span><span class="metric"><span class="metric-label">SiSpec</span> 30.61</span><span class="metric"><span class="metric-label">SI-SDR</span> 29.28</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.84</span><span class="metric"><span class="metric-label">SiSpec</span> 30.61</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.13</span></div>
                 </div>
 
                 <div class="card transport-card">
@@ -1517,7 +1506,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_Degraded.png" alt="Spectrogram for Degraded">
                   <audio controls preload="none" src="degraded/bwe_4_Degraded.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 3.06</span><span class="metric"><span class="metric-label">SiSpec</span> 32.69</span><span class="metric"><span class="metric-label">SI-SDR</span> 32.67</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 3.06</span><span class="metric"><span class="metric-label">SiSpec</span> 32.69</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.93</span></div>
                 </div>
                 
                 <div class="card">
@@ -1527,7 +1516,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_AudioSR.png" alt="Spectrogram for AudioSR">
                   <audio controls preload="none" src="audiosr/bwe_4_AudioSR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.87</span><span class="metric"><span class="metric-label">SiSpec</span> 17.87</span><span class="metric"><span class="metric-label">SI-SDR</span> 16.45</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.87</span><span class="metric"><span class="metric-label">SiSpec</span> 17.87</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.34</span></div>
                 </div>
                 
                 <div class="card">
@@ -1537,7 +1526,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_CQTDiff.png" alt="Spectrogram for CQTDiff">
                   <audio controls preload="none" src="cqtdiff/bwe_4_CQTDiff.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.69</span><span class="metric"><span class="metric-label">SiSpec</span> 20.28</span><span class="metric"><span class="metric-label">SI-SDR</span> -33.71</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.69</span><span class="metric"><span class="metric-label">SiSpec</span> 20.28</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.15</span></div>
                 </div>
                 
                 <div class="card">
@@ -1547,7 +1536,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_IBAR.png" alt="Spectrogram for IBAR">
                   <audio controls preload="none" src="IBAR/bwe_4_IBAR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.46</span><span class="metric"><span class="metric-label">SiSpec</span> 7.69</span><span class="metric"><span class="metric-label">SI-SDR</span> -24.37</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.46</span><span class="metric"><span class="metric-label">SiSpec</span> 7.69</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.38</span></div>
                 </div>
                 
                 <div class="card">
@@ -1557,7 +1546,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_A2SB_4split.png" alt="Spectrogram for A2SB (4-split)">
                   <audio controls preload="none" src="A2SB/bwe_4_A2SB_4split.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.49</span><span class="metric"><span class="metric-label">SiSpec</span> 33.56</span><span class="metric"><span class="metric-label">SI-SDR</span> 32.38</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.49</span><span class="metric"><span class="metric-label">SiSpec</span> 33.56</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.48</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1567,7 +1556,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_4_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.75</span><span class="metric"><span class="metric-label">SiSpec</span> 15.83</span><span class="metric"><span class="metric-label">SI-SDR</span> 12.64</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.75</span><span class="metric"><span class="metric-label">SiSpec</span> 15.83</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.97</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1577,7 +1566,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_4_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.76</span><span class="metric"><span class="metric-label">SiSpec</span> 15.94</span><span class="metric"><span class="metric-label">SI-SDR</span> 12.69</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.76</span><span class="metric"><span class="metric-label">SiSpec</span> 15.94</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.98</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1587,7 +1576,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_4_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_4_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.72</span><span class="metric"><span class="metric-label">SiSpec</span> 24.80</span><span class="metric"><span class="metric-label">SI-SDR</span> 23.58</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.72</span><span class="metric"><span class="metric-label">SiSpec</span> 24.80</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.99</span></div>
                 </div>
 
                 <div class="card transport-card">
@@ -1709,7 +1698,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_Degraded.png" alt="Spectrogram for Degraded">
                   <audio controls preload="none" src="degraded/bwe_5_Degraded.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.08</span><span class="metric"><span class="metric-label">SiSpec</span> 29.77</span><span class="metric"><span class="metric-label">SI-SDR</span> 29.74</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 2.08</span><span class="metric"><span class="metric-label">SiSpec</span> 29.77</span><span class="metric"><span class="metric-label">ViSQOL</span> 4.22</span></div>
                 </div>
                 
                 <div class="card">
@@ -1719,7 +1708,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_AudioSR.png" alt="Spectrogram for AudioSR">
                   <audio controls preload="none" src="audiosr/bwe_5_AudioSR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.90</span><span class="metric"><span class="metric-label">SiSpec</span> 22.11</span><span class="metric"><span class="metric-label">SI-SDR</span> 18.51</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.90</span><span class="metric"><span class="metric-label">SiSpec</span> 22.11</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.67</span></div>
                 </div>
                 
                 <div class="card">
@@ -1729,7 +1718,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_CQTDiff.png" alt="Spectrogram for CQTDiff">
                   <audio controls preload="none" src="cqtdiff/bwe_5_CQTDiff.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.40</span><span class="metric"><span class="metric-label">SiSpec</span> 19.94</span><span class="metric"><span class="metric-label">SI-SDR</span> -10.27</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.40</span><span class="metric"><span class="metric-label">SiSpec</span> 19.94</span><span class="metric"><span class="metric-label">ViSQOL</span> 1.74</span></div>
                 </div>
                 
                 <div class="card">
@@ -1739,7 +1728,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_IBAR.png" alt="Spectrogram for IBAR">
                   <audio controls preload="none" src="IBAR/bwe_5_IBAR.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.17</span><span class="metric"><span class="metric-label">SiSpec</span> 11.47</span><span class="metric"><span class="metric-label">SI-SDR</span> -50.76</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.17</span><span class="metric"><span class="metric-label">SiSpec</span> 11.47</span><span class="metric"><span class="metric-label">ViSQOL</span> 2.65</span></div>
                 </div>
                 
                 <div class="card">
@@ -1749,7 +1738,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_A2SB_4split.png" alt="Spectrogram for A2SB (4-split)">
                   <audio controls preload="none" src="A2SB/bwe_5_A2SB_4split.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.59</span><span class="metric"><span class="metric-label">SiSpec</span> 28.53</span><span class="metric"><span class="metric-label">SI-SDR</span> 27.64</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.59</span><span class="metric"><span class="metric-label">SiSpec</span> 28.53</span><span class="metric"><span class="metric-label">ViSQOL</span> 3.97</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1759,7 +1748,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_mean_shift.png" alt="Spectrogram for Mean Shift">
                   <audio controls preload="none" src="mean_shift/bwe_5_mean_shift.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.08</span><span class="metric"><span class="metric-label">SiSpec</span> 14.53</span><span class="metric"><span class="metric-label">SI-SDR</span> 10.81</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.08</span><span class="metric"><span class="metric-label">SiSpec</span> 14.53</span><span class="metric"><span class="metric-label">ViSQOL</span> 4.02</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1769,7 +1758,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_local_mean.png" alt="Spectrogram for Local Mean">
                   <audio controls preload="none" src="mean_shift/bwe_5_local_mean.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.05</span><span class="metric"><span class="metric-label">SiSpec</span> 14.67</span><span class="metric"><span class="metric-label">SI-SDR</span> 10.98</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 1.05</span><span class="metric"><span class="metric-label">SiSpec</span> 14.67</span><span class="metric"><span class="metric-label">ViSQOL</span> 4.18</span></div>
                 </div>
                 
                 <div class="card transport-card">
@@ -1779,7 +1768,7 @@
                   </div>
                   <img class="spectrogram" src="spectrograms/bwe_5_local_mean_clean_lowband.png" alt="Spectrogram for Local Mean with Clean Lowband">
                   <audio controls preload="none" src="mean_shift/bwe_5_local_mean_clean_lowband.wav"></audio>
-                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.98</span><span class="metric"><span class="metric-label">SiSpec</span> 31.60</span><span class="metric"><span class="metric-label">SI-SDR</span> 29.46</span></div>
+                  <div class="metrics"><div class="metrics-title">Raw-clean eval</div><span class="metric"><span class="metric-label">LSD</span> 0.98</span><span class="metric"><span class="metric-label">SiSpec</span> 31.60</span><span class="metric"><span class="metric-label">ViSQOL</span> 4.23</span></div>
                 </div>
 
                 <div class="card transport-card">
@@ -2007,51 +1996,51 @@
       }
 
       const EXTRA_CODEC_METRICS = {
-        "codicodec_transport/bwe_0_mean_shift.wav": { lsd: "2.51", sispec: "8.00", si_sdr: "3.86" },
-        "codicodec_transport/bwe_0_local_mean.wav": { lsd: "2.27", sispec: "8.02", si_sdr: "3.82" },
-        "codicodec_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.22", sispec: "18.20", si_sdr: "15.95" },
-        "codicodec_transport/bwe_1_mean_shift.wav": { lsd: "1.44", sispec: "11.95", si_sdr: "8.07" },
-        "codicodec_transport/bwe_1_local_mean.wav": { lsd: "1.38", sispec: "11.54", si_sdr: "7.87" },
-        "codicodec_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.32", sispec: "21.82", si_sdr: "19.26" },
-        "codicodec_transport/bwe_2_mean_shift.wav": { lsd: "0.96", sispec: "10.76", si_sdr: "6.38" },
-        "codicodec_transport/bwe_2_local_mean.wav": { lsd: "1.06", sispec: "10.45", si_sdr: "6.20" },
-        "codicodec_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "0.97", sispec: "30.03", si_sdr: "29.72" },
-        "codicodec_transport/bwe_4_mean_shift.wav": { lsd: "1.62", sispec: "12.35", si_sdr: "8.36" },
-        "codicodec_transport/bwe_4_local_mean.wav": { lsd: "1.60", sispec: "11.89", si_sdr: "7.95" },
-        "codicodec_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.55", sispec: "24.71", si_sdr: "23.77" },
-        "codicodec_transport/bwe_5_mean_shift.wav": { lsd: "1.06", sispec: "9.96", si_sdr: "5.87" },
-        "codicodec_transport/bwe_5_local_mean.wav": { lsd: "1.05", sispec: "10.29", si_sdr: "6.29" },
-        "codicodec_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "0.96", sispec: "31.14", si_sdr: "29.92" },
-        "dac_transport/bwe_0_mean_shift.wav": { lsd: "2.89", sispec: "13.69", si_sdr: "11.91" },
-        "dac_transport/bwe_0_local_mean.wav": { lsd: "2.63", sispec: "13.70", si_sdr: "11.94" },
-        "dac_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.60", sispec: "17.95", si_sdr: "16.46" },
-        "dac_transport/bwe_1_mean_shift.wav": { lsd: "1.50", sispec: "17.37", si_sdr: "15.34" },
-        "dac_transport/bwe_1_local_mean.wav": { lsd: "1.53", sispec: "17.49", si_sdr: "15.48" },
-        "dac_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.49", sispec: "21.61", si_sdr: "19.79" },
-        "dac_transport/bwe_2_mean_shift.wav": { lsd: "0.96", sispec: "14.69", si_sdr: "12.31" },
-        "dac_transport/bwe_2_local_mean.wav": { lsd: "1.06", sispec: "15.01", si_sdr: "12.61" },
-        "dac_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "0.99", sispec: "30.08", si_sdr: "29.70" },
-        "dac_transport/bwe_4_mean_shift.wav": { lsd: "1.86", sispec: "15.86", si_sdr: "14.01" },
-        "dac_transport/bwe_4_local_mean.wav": { lsd: "1.85", sispec: "15.66", si_sdr: "13.95" },
-        "dac_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.81", sispec: "30.18", si_sdr: "28.68" },
-        "dac_transport/bwe_5_mean_shift.wav": { lsd: "1.19", sispec: "14.51", si_sdr: "12.48" },
-        "dac_transport/bwe_5_local_mean.wav": { lsd: "1.08", sispec: "14.86", si_sdr: "12.78" },
-        "dac_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "1.02", sispec: "31.38", si_sdr: "29.75" },
-        "encodec_transport/bwe_0_mean_shift.wav": { lsd: "2.29", sispec: "15.56", si_sdr: "13.93" },
-        "encodec_transport/bwe_0_local_mean.wav": { lsd: "2.40", sispec: "15.29", si_sdr: "13.82" },
-        "encodec_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.36", sispec: "17.54", si_sdr: "16.77" },
-        "encodec_transport/bwe_1_mean_shift.wav": { lsd: "1.71", sispec: "19.95", si_sdr: "17.99" },
-        "encodec_transport/bwe_1_local_mean.wav": { lsd: "1.74", sispec: "19.65", si_sdr: "18.07" },
-        "encodec_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.71", sispec: "21.21", si_sdr: "20.10" },
-        "encodec_transport/bwe_2_mean_shift.wav": { lsd: "1.81", sispec: "19.57", si_sdr: "16.94" },
-        "encodec_transport/bwe_2_local_mean.wav": { lsd: "1.67", sispec: "19.95", si_sdr: "17.27" },
-        "encodec_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "1.63", sispec: "30.51", si_sdr: "29.43" },
-        "encodec_transport/bwe_4_mean_shift.wav": { lsd: "1.92", sispec: "19.79", si_sdr: "17.57" },
-        "encodec_transport/bwe_4_local_mean.wav": { lsd: "1.80", sispec: "19.89", si_sdr: "17.62" },
-        "encodec_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.76", sispec: "32.34", si_sdr: "31.03" },
-        "encodec_transport/bwe_5_mean_shift.wav": { lsd: "1.48", sispec: "18.86", si_sdr: "16.46" },
-        "encodec_transport/bwe_5_local_mean.wav": { lsd: "1.36", sispec: "19.25", si_sdr: "16.85" },
-        "encodec_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "1.32", sispec: "31.96", si_sdr: "29.55" }
+        "codicodec_transport/bwe_0_mean_shift.wav": { lsd: "2.51", sispec: "8.00", visqol: "2.19" },
+        "codicodec_transport/bwe_0_local_mean.wav": { lsd: "2.27", sispec: "8.02", visqol: "2.36" },
+        "codicodec_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.22", sispec: "18.20", visqol: "2.39" },
+        "codicodec_transport/bwe_1_mean_shift.wav": { lsd: "1.44", sispec: "11.95", visqol: "2.42" },
+        "codicodec_transport/bwe_1_local_mean.wav": { lsd: "1.38", sispec: "11.54", visqol: "2.51" },
+        "codicodec_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.32", sispec: "21.82", visqol: "2.59" },
+        "codicodec_transport/bwe_2_mean_shift.wav": { lsd: "0.96", sispec: "10.76", visqol: "3.06" },
+        "codicodec_transport/bwe_2_local_mean.wav": { lsd: "1.06", sispec: "10.45", visqol: "3.06" },
+        "codicodec_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "0.97", sispec: "30.03", visqol: "3.13" },
+        "codicodec_transport/bwe_4_mean_shift.wav": { lsd: "1.62", sispec: "12.35", visqol: "2.41" },
+        "codicodec_transport/bwe_4_local_mean.wav": { lsd: "1.60", sispec: "11.89", visqol: "2.39" },
+        "codicodec_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.55", sispec: "24.71", visqol: "2.44" },
+        "codicodec_transport/bwe_5_mean_shift.wav": { lsd: "1.06", sispec: "9.96", visqol: "3.84" },
+        "codicodec_transport/bwe_5_local_mean.wav": { lsd: "1.05", sispec: "10.29", visqol: "4.04" },
+        "codicodec_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "0.96", sispec: "31.14", visqol: "4.20" },
+        "dac_transport/bwe_0_mean_shift.wav": { lsd: "2.89", sispec: "13.69", visqol: "2.08" },
+        "dac_transport/bwe_0_local_mean.wav": { lsd: "2.63", sispec: "13.70", visqol: "2.23" },
+        "dac_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.60", sispec: "17.95", visqol: "2.27" },
+        "dac_transport/bwe_1_mean_shift.wav": { lsd: "1.50", sispec: "17.37", visqol: "2.43" },
+        "dac_transport/bwe_1_local_mean.wav": { lsd: "1.53", sispec: "17.49", visqol: "2.51" },
+        "dac_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.49", sispec: "21.61", visqol: "2.57" },
+        "dac_transport/bwe_2_mean_shift.wav": { lsd: "0.96", sispec: "14.69", visqol: "2.85" },
+        "dac_transport/bwe_2_local_mean.wav": { lsd: "1.06", sispec: "15.01", visqol: "3.06" },
+        "dac_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "0.99", sispec: "30.08", visqol: "3.11" },
+        "dac_transport/bwe_4_mean_shift.wav": { lsd: "1.86", sispec: "15.86", visqol: "2.53" },
+        "dac_transport/bwe_4_local_mean.wav": { lsd: "1.85", sispec: "15.66", visqol: "2.48" },
+        "dac_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.81", sispec: "30.18", visqol: "2.50" },
+        "dac_transport/bwe_5_mean_shift.wav": { lsd: "1.19", sispec: "14.51", visqol: "3.58" },
+        "dac_transport/bwe_5_local_mean.wav": { lsd: "1.08", sispec: "14.86", visqol: "4.11" },
+        "dac_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "1.02", sispec: "31.38", visqol: "4.19" },
+        "encodec_transport/bwe_0_mean_shift.wav": { lsd: "2.29", sispec: "15.56", visqol: "2.76" },
+        "encodec_transport/bwe_0_local_mean.wav": { lsd: "2.40", sispec: "15.29", visqol: "2.62" },
+        "encodec_transport/bwe_0_local_mean_clean_lowband.wav": { lsd: "2.36", sispec: "17.54", visqol: "2.63" },
+        "encodec_transport/bwe_1_mean_shift.wav": { lsd: "1.71", sispec: "19.95", visqol: "2.47" },
+        "encodec_transport/bwe_1_local_mean.wav": { lsd: "1.74", sispec: "19.65", visqol: "2.43" },
+        "encodec_transport/bwe_1_local_mean_clean_lowband.wav": { lsd: "1.71", sispec: "21.21", visqol: "2.49" },
+        "encodec_transport/bwe_2_mean_shift.wav": { lsd: "1.81", sispec: "19.57", visqol: "1.91" },
+        "encodec_transport/bwe_2_local_mean.wav": { lsd: "1.67", sispec: "19.95", visqol: "2.62" },
+        "encodec_transport/bwe_2_local_mean_clean_lowband.wav": { lsd: "1.63", sispec: "30.51", visqol: "2.65" },
+        "encodec_transport/bwe_4_mean_shift.wav": { lsd: "1.92", sispec: "19.79", visqol: "1.71" },
+        "encodec_transport/bwe_4_local_mean.wav": { lsd: "1.80", sispec: "19.89", visqol: "1.73" },
+        "encodec_transport/bwe_4_local_mean_clean_lowband.wav": { lsd: "1.76", sispec: "32.34", visqol: "1.74" },
+        "encodec_transport/bwe_5_mean_shift.wav": { lsd: "1.48", sispec: "18.86", visqol: "2.79" },
+        "encodec_transport/bwe_5_local_mean.wav": { lsd: "1.36", sispec: "19.25", visqol: "4.11" },
+        "encodec_transport/bwe_5_local_mean_clean_lowband.wav": { lsd: "1.32", sispec: "31.96", visqol: "4.15" }
       };
 
       function buildMetricStrip(metrics) {
@@ -2060,7 +2049,7 @@
             <div class="metrics-title">Raw-clean eval</div>
             <span class="metric"><span class="metric-label">LSD</span> ${metrics.lsd}</span>
             <span class="metric"><span class="metric-label">SiSpec</span> ${metrics.sispec}</span>
-            <span class="metric"><span class="metric-label">SI-SDR</span> ${metrics.si_sdr}</span>
+            <span class="metric"><span class="metric-label">ViSQOL</span> ${metrics.visqol}</span>
           </div>
         `;
       }
