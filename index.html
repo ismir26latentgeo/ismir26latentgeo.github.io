@@ -4,149 +4,168 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>On the Geometry of Music Bandwidth Extension in Latent Spaces of Audio Codecs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5f1e8;
-      --panel: #fffdf8;
-      --ink: #1f2a30;
-      --muted: #67737a;
-      --line: #d8d0c3;
-      --accent: #325c73;
+      --bg: #fff;
+      --section: #f8f9fa;
+      --panel: #fff;
+      --ink: #202124;
+      --muted: #5f6368;
+      --line: #e8eaed;
+      --accent: #1a73e8;
+      --accent-hover: #185abc;
+      --accent-soft: rgba(26, 115, 232, 0.08);
+      --transport-panel: #eef4ff;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at top left, rgba(80, 119, 141, 0.08), transparent 28%),
-        linear-gradient(180deg, #f8f4ec 0%, var(--bg) 100%);
+      font-family: "Google Sans", Arial, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
       color: var(--ink);
     }
     .wrap {
-      max-width: 1600px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 32px 24px 56px;
+      padding: 40px 20px 56px;
       display: flex;
       flex-direction: column;
     }
     h1 {
-      margin: 0 0 8px;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      margin: 0 0 0.5em;
+      color: var(--ink);
+      font-size: 2.5em;
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: center;
     }
     .paper-meta {
       display: flex;
       flex-direction: column;
       gap: 6px;
-      margin: 0 0 18px;
+      align-items: center;
+      margin: 0 auto 30px;
       color: var(--muted);
       line-height: 1.45;
       max-width: 960px;
+      text-align: center;
     }
     .paper-meta p {
       margin: 0;
     }
+    .conference {
+      color: var(--accent);
+      font-size: 1.5em;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
     .authors {
       color: var(--ink);
-      font-weight: 700;
+      font-weight: 500;
     }
     .equal-contribution {
-      font-size: 0.92rem;
+      font-size: 0.9em;
     }
     .paper-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 4px;
+      justify-content: center;
+      margin-top: 10px;
     }
     .paper-link {
       display: inline-flex;
       align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(50, 92, 115, 0.18);
-      background: rgba(255, 253, 248, 0.72);
-      color: var(--accent);
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: var(--accent);
+      color: #fff;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
+      font-size: 0.95em;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     a.paper-link:hover {
-      background: rgba(50, 92, 115, 0.08);
+      background: var(--accent-hover);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .paper-link-placeholder {
+      border-color: #dadce0;
+      background: #f1f3f4;
       color: var(--muted);
       cursor: default;
-    }
-    .intro {
-      margin: 0 0 28px;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.45;
-      max-width: 880px;
+      box-shadow: none;
     }
     .abstract-panel {
-      margin: 0 0 24px;
-      padding: 18px 20px;
-      background: rgba(255, 253, 248, 0.88);
+      margin: 0 0 30px;
+      padding: 30px;
+      background: var(--section);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: 0 10px 28px rgba(31, 42, 48, 0.06);
+      border-radius: 30px;
     }
     .abstract-panel h2 {
-      margin: 0 0 10px;
-      font-size: 1.15rem;
-      color: var(--accent);
+      margin: 0 0 1em;
+      color: var(--ink);
+      font-size: 1.5em;
+      font-weight: 500;
     }
     .abstract-panel p {
       margin: 0;
       color: var(--ink);
-      line-height: 1.6;
+      font-size: 0.92em;
       max-width: 1180px;
+      text-align: justify;
     }
     .page-nav {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
-      margin: 0 0 24px;
+      gap: 5px;
+      margin: 0 0 30px;
       order: 0;
     }
     .page-nav a {
       display: inline-flex;
       align-items: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(50, 92, 115, 0.18);
-      background: rgba(255, 253, 248, 0.72);
-      color: var(--accent);
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 3px solid transparent;
+      background: var(--accent);
+      color: #fff;
       text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 700;
+      font-size: 0.9em;
+      font-weight: 500;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     .page-nav a:hover {
-      background: rgba(50, 92, 115, 0.08);
+      background: var(--accent-hover);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
     .summary-panel {
       display: grid;
       grid-template-columns: minmax(320px, 1.15fr) minmax(420px, 1fr);
       gap: 18px;
-      margin: 0 0 24px;
-      padding: 18px 20px;
-      background: rgba(255, 253, 248, 0.88);
+      margin: 0 0 30px;
+      padding: 30px;
+      background: var(--section);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: 0 10px 28px rgba(31, 42, 48, 0.06);
+      border-radius: 30px;
       order: 1;
     }
     .summary-copy h2 {
       margin: 0 0 8px;
-      font-size: 1.35rem;
+      color: var(--ink);
+      font-size: 1.5em;
+      font-weight: 500;
     }
     .summary-copy p {
       margin: 0 0 12px;
       color: var(--muted);
-      line-height: 1.45;
     }
     .summary-notes {
       margin: 0;
@@ -164,14 +183,14 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 0.95rem;
-      background: rgba(255,255,255,0.55);
+      background: #fff;
       border-radius: 14px;
       overflow: hidden;
     }
     .summary-table th,
     .summary-table td {
       padding: 10px 12px;
-      border-bottom: 1px solid rgba(216, 208, 195, 0.8);
+      border-bottom: 1px solid rgba(232, 234, 237, 0.9);
       text-align: right;
       white-space: nowrap;
     }
@@ -188,50 +207,51 @@
       font-size: 0.82rem;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      background: rgba(50, 92, 115, 0.05);
+      background: var(--accent-soft);
     }
     .summary-table tbody tr:last-child td {
       border-bottom: none;
     }
     .listening-panel {
-      margin: 0 0 28px;
-      padding: 20px 20px 24px;
-      background: rgba(255, 253, 248, 0.84);
+      margin: 0 0 30px;
+      padding: 30px;
+      background: var(--section);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: 0 10px 28px rgba(31, 42, 48, 0.06);
+      border-radius: 30px;
       order: 3;
     }
     .listening-panel h2 {
       margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 1.5em;
+      font-weight: 500;
     }
     .listening-intro {
       margin: 0 0 6px;
       color: var(--muted);
-      line-height: 1.5;
       max-width: 980px;
     }
     .listening-note {
       margin: 0 0 18px;
       color: var(--muted);
-      line-height: 1.5;
     }
     .paper-results {
-      margin: 0 0 28px;
-      padding: 20px 20px 24px;
-      background: rgba(255, 253, 248, 0.84);
+      margin: 0 0 30px;
+      padding: 30px;
+      background: var(--section);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: 0 10px 28px rgba(31, 42, 48, 0.06);
+      border-radius: 30px;
       order: 5;
     }
     .paper-results h2 {
       margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 1.5em;
+      font-weight: 500;
     }
     .paper-intro {
       margin: 0;
       color: var(--muted);
-      line-height: 1.5;
       max-width: 980px;
     }
     .paper-subsection {
@@ -241,6 +261,7 @@
       margin: 0 0 12px;
       font-size: 1.1rem;
       color: var(--accent);
+      font-weight: 500;
     }
     .paper-float-grid {
       display: grid;
@@ -252,7 +273,7 @@
       padding: 14px;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 20px;
     }
     .paper-float-card.full-width {
       grid-column: 1 / -1;
@@ -260,9 +281,9 @@
     .paper-float-card img {
       width: 100%;
       display: block;
-      border-radius: 12px;
-      border: 1px solid rgba(50, 92, 115, 0.10);
-      background: #faf7f0;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
       margin-bottom: 12px;
     }
     .paper-float-type {
@@ -270,7 +291,7 @@
       margin-bottom: 8px;
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(50, 92, 115, 0.08);
+      background: var(--accent-soft);
       color: var(--accent);
       font-size: 0.76rem;
       font-weight: 700;
@@ -285,7 +306,6 @@
     .paper-float-card p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.5;
       font-size: 0.93rem;
     }
     .paper-float-meta {
@@ -296,9 +316,9 @@
     }
     .paper-inline-table {
       margin-top: 12px;
-      border: 1px solid rgba(216, 208, 195, 0.85);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
       overflow: hidden;
     }
     .paper-inline-table summary {
@@ -307,22 +327,22 @@
       list-style: none;
       font-weight: 700;
       color: var(--accent);
-      background: rgba(50, 92, 115, 0.05);
+      background: var(--accent-soft);
     }
     .paper-inline-table summary::-webkit-details-marker {
       display: none;
     }
     .paper-inline-table[open] summary {
-      border-bottom: 1px solid rgba(216, 208, 195, 0.8);
+      border-bottom: 1px solid rgba(232, 234, 237, 0.9);
     }
     .paper-float-missing {
       display: grid;
       place-items: center;
       min-height: 180px;
       margin-bottom: 12px;
-      border: 1px dashed rgba(50, 92, 115, 0.22);
-      border-radius: 12px;
-      background: rgba(50, 92, 115, 0.04);
+      border: 1px dashed rgba(26, 115, 232, 0.24);
+      border-radius: 16px;
+      background: var(--accent-soft);
       color: var(--muted);
       text-align: center;
       padding: 14px;
@@ -342,14 +362,14 @@
       padding: 12px;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 20px;
     }
     .paper-figure img {
       width: 100%;
       display: block;
-      border-radius: 12px;
-      border: 1px solid rgba(50, 92, 115, 0.10);
-      background: #faf7f0;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
     }
     .paper-strip {
       display: grid;
@@ -370,8 +390,8 @@
     .paper-block {
       margin-top: 12px;
       border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.45);
+      border-radius: 20px;
+      background: #fff;
       overflow: hidden;
     }
     .paper-block summary {
@@ -380,13 +400,13 @@
       list-style: none;
       font-weight: 700;
       color: var(--accent);
-      background: rgba(50, 92, 115, 0.05);
+      background: var(--accent-soft);
     }
     .paper-block summary::-webkit-details-marker {
       display: none;
     }
     .paper-block[open] summary {
-      border-bottom: 1px solid rgba(216, 208, 195, 0.8);
+      border-bottom: 1px solid rgba(232, 234, 237, 0.9);
     }
     .paper-table-wrap {
       overflow-x: auto;
@@ -396,12 +416,12 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 0.84rem;
-      background: rgba(255, 255, 255, 0.6);
+      background: #fff;
     }
     .paper-table th,
     .paper-table td {
       padding: 8px 10px;
-      border: 1px solid rgba(216, 208, 195, 0.8);
+      border: 1px solid rgba(232, 234, 237, 0.9);
       text-align: right;
       white-space: nowrap;
     }
@@ -414,12 +434,12 @@
       text-align: center;
     }
     .paper-table thead th {
-      background: rgba(50, 92, 115, 0.05);
+      background: var(--accent-soft);
       color: var(--accent);
       font-weight: 700;
     }
     .paper-table .group-row td {
-      background: rgba(50, 92, 115, 0.04);
+      background: rgba(26, 115, 232, 0.05);
       color: var(--accent);
       font-weight: 700;
       text-align: left;
@@ -439,13 +459,11 @@
       order: 4;
     }
     .example {
-      background: rgba(255, 253, 248, 0.82);
+      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 18px 18px 20px;
       margin-bottom: 18px;
-      box-shadow: 0 10px 28px rgba(31, 42, 48, 0.06);
-      backdrop-filter: blur(6px);
     }
     .example-head {
       display: flex;
@@ -456,8 +474,9 @@
     }
     h2 {
       margin: 0;
-      font-size: 1.35rem;
-      font-weight: 700;
+      color: var(--ink);
+      font-size: 1.5em;
+      font-weight: 500;
     }
     .meta {
       color: var(--muted);
@@ -481,7 +500,7 @@
     .example-group-title {
       margin: 0;
       font-size: 0.96rem;
-      font-weight: 700;
+      font-weight: 500;
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: var(--accent);
@@ -500,13 +519,12 @@
     .card {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 14px;
     }
     .card.transport-card {
-      background: #f3ece1;
-      border-color: #c9bcaa;
-      box-shadow: inset 0 0 0 1px rgba(50, 92, 115, 0.04);
+      background: var(--transport-panel);
+      border-color: #d2e3fc;
     }
     .card-head {
       margin-bottom: 10px;
@@ -515,9 +533,9 @@
     .spectrogram {
       width: 100%;
       display: block;
-      border-radius: 10px;
+      border-radius: 16px;
       margin-bottom: 10px;
-      border: 1px solid rgba(50, 92, 115, 0.10);
+      border: 1px solid var(--line);
       background: #1a1a1a;
       cursor: zoom-in;
     }
@@ -526,9 +544,9 @@
       place-items: center;
       min-height: 180px;
       margin-bottom: 10px;
-      border: 1px dashed rgba(50, 92, 115, 0.22);
-      border-radius: 10px;
-      background: rgba(50, 92, 115, 0.04);
+      border: 1px dashed rgba(26, 115, 232, 0.24);
+      border-radius: 16px;
+      background: var(--accent-soft);
       color: var(--muted);
       text-align: center;
       padding: 14px;
@@ -541,7 +559,7 @@
     .metrics {
       margin-top: 10px;
       padding-top: 10px;
-      border-top: 1px solid rgba(216, 208, 195, 0.9);
+      border-top: 1px solid rgba(232, 234, 237, 0.9);
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -559,7 +577,7 @@
       gap: 4px;
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(50, 92, 115, 0.08);
+      background: var(--accent-soft);
       color: var(--ink);
       font-size: 0.78rem;
       white-space: nowrap;
@@ -592,8 +610,8 @@
       align-items: center;
       padding: 3px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(50, 92, 115, 0.20);
-      background: rgba(50, 92, 115, 0.07);
+      border: 1px solid rgba(26, 115, 232, 0.24);
+      background: var(--accent-soft);
       color: var(--accent);
       text-decoration: none;
       font-size: 0.72rem;
@@ -601,8 +619,8 @@
       letter-spacing: 0.01em;
     }
     .mini-link:hover {
-      background: rgba(50, 92, 115, 0.13);
-      color: #24475a;
+      background: rgba(26, 115, 232, 0.14);
+      color: var(--accent-hover);
     }
     .filename {
       margin-top: 4px;
@@ -654,7 +672,7 @@
       background: #111;
     }
     .lightbox-caption {
-      color: #f5f1e8;
+      color: #f8f9fa;
       font-size: 0.95rem;
       line-height: 1.4;
       text-align: center;
@@ -668,7 +686,7 @@
       height: 42px;
       border: none;
       border-radius: 999px;
-      background: rgba(255, 253, 248, 0.14);
+      background: rgba(248, 249, 250, 0.14);
       color: #fff;
       font-size: 1.6rem;
       line-height: 1;
@@ -682,7 +700,15 @@
       }
     }
     @media (max-width: 720px) {
-      .wrap { padding: 20px 14px 40px; }
+      .wrap { padding: 28px 14px 40px; }
+      h1 { font-size: 2em; }
+      .abstract-panel,
+      .summary-panel,
+      .listening-panel,
+      .paper-results {
+        padding: 22px;
+        border-radius: 24px;
+      }
       .summary-panel { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
       .example-group-grid.reference-grid,
@@ -701,6 +727,7 @@
   <div class="wrap">
     <h1>On the Geometry of Music Bandwidth Extension in Latent Spaces of Audio Codecs</h1>
     <div class="paper-meta">
+      <p class="conference">ISMIR 2026</p>
       <p class="authors">Hendrik Vincent Koops* &middot; Hao Hao Tan* &middot; Elio Quinton</p>
       <p>Music &amp; Audio Machine Learning Lab, Universal Music Group, London, U.K.</p>
       <p class="equal-contribution">* Equal contribution</p>
@@ -708,15 +735,14 @@
         <span class="paper-link paper-link-placeholder">Paper link (TBD)</span>
       </div>
     </div>
-    <p class="intro">This page starts with the matched listening examples for quick qualitative comparison, then adds a compact paper-results appendix with the draft figures and tables further down for quantitative context.</p>
+    <nav class="page-nav">
+      <a href="#paper-results">Paper Results</a>
+      <a href="#listening-examples">Listening Examples</a>
+    </nav>
     <section class="abstract-panel">
       <h2>Abstract</h2>
       <p>Recent audio restoration increasingly relies on large-scale conditional latent generative modeling, including diffusion, Schr&ouml;dinger Bridges, and Flow Matching variants, to invert degradations such as bandwidth limitation or noise. We present an analysis of the performance of various state-of-the-art methods compared to simple arithmetic transformations in the latent spaces of multiple neural codecs for musical bandwidth extension. We show that estimating a single transport vector between the clean and degraded latent centroids on a reference set, and adding it to degraded latents, can yield restoration performance competitive with large diffusion models. This suggests, first, that some neural codec latent spaces exhibit structure aligned with audio bandwidth; and second, that in such cases complex conditional models may offer only limited gains over a simple vector addition. We argue that these findings reveal an interesting avenue for future research whereby models could take advantage of the latent space structure in order to offer greater training and parameter efficiency, and overall better performance. Additionally, we propose to consider this simple arithmetic transformation as a baseline for music bandwidth extension research, as it allows an assessment of the contribution of learnable parameters towards restoration performance.</p>
     </section>
-    <nav class="page-nav">
-      <a href="#paper-results">Paper results</a>
-      <a href="#listening-examples">Listening examples</a>
-    </nav>
     
     <div class="section-anchor" id="paper-results"></div>
     <section class="paper-results">
