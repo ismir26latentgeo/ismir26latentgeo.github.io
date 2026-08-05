@@ -63,12 +63,61 @@
       font-weight: 500;
       margin-bottom: 4px;
     }
+    .conference a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .conference a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .linkedin-link:hover {
+      color: var(--accent);
+    }
     .authors {
       color: var(--ink);
       font-weight: 500;
     }
+    .author {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--muted);
+      line-height: 1;
+    }
+    .linkedin-link svg {
+      width: 0.9em;
+      height: 0.9em;
+      display: block;
+      fill: currentColor;
+    }
     .equal-contribution {
       font-size: 0.9em;
+    }
+    .institution-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      margin: 14px 0 4px;
+    }
+    .institution-logos img {
+      display: block;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+    }
+    .institution-logos .maml-logo {
+      height: 48px;
+    }
+    .institution-logos .umg-logo {
+      height: 56px;
     }
     .paper-links {
       display: flex;
@@ -93,13 +142,6 @@
     a.paper-link:hover {
       background: var(--accent-hover);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .paper-link-placeholder {
-      border-color: #dadce0;
-      background: #f1f3f4;
-      color: var(--muted);
-      cursor: default;
-      box-shadow: none;
     }
     .abstract-panel {
       margin: 0 0 30px;
@@ -702,6 +744,15 @@
     @media (max-width: 720px) {
       .wrap { padding: 28px 14px 40px; }
       h1 { font-size: 2em; }
+      .institution-logos {
+        gap: 18px;
+      }
+      .institution-logos .maml-logo {
+        height: 38px;
+      }
+      .institution-logos .umg-logo {
+        height: 44px;
+      }
       .abstract-panel,
       .summary-panel,
       .listening-panel,
@@ -727,12 +778,16 @@
   <div class="wrap">
     <h1>On the Geometry of Music Bandwidth Extension in Latent Spaces of Audio Codecs</h1>
     <div class="paper-meta">
-      <p class="conference">ISMIR 2026</p>
-      <p class="authors">Hendrik Vincent Koops* &middot; Hao Hao Tan* &middot; Elio Quinton</p>
-      <p>Music &amp; Audio Machine Learning Lab, Universal Music Group, London, U.K.</p>
+      <p class="conference"><a href="https://ismir2026.ismir.net/" target="_blank" rel="noopener noreferrer">ISMIR 2026</a></p>
+      <p class="authors"><span class="author">Hendrik Vincent Koops* <a class="linkedin-link" href="https://nl.linkedin.com/in/hvkoops" target="_blank" rel="noopener noreferrer" aria-label="Hendrik Vincent Koops on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></span> &middot; <span class="author">Hao Hao Tan* <a class="linkedin-link" href="https://sg.linkedin.com/in/tan-hao-hao" target="_blank" rel="noopener noreferrer" aria-label="Hao Hao Tan on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></span> &middot; <span class="author">Elio Quinton <a class="linkedin-link" href="https://uk.linkedin.com/in/elio-quinton-22801952/" target="_blank" rel="noopener noreferrer" aria-label="Elio Quinton on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></span></p>
+      <p>Music &amp; Advanced Machine Learning Lab, Universal Music Group, London, U.K.</p>
       <p class="equal-contribution">* Equal contribution</p>
+      <div class="institution-logos" aria-label="Institution logos">
+        <img class="umg-logo" src="assets/umg-logo.svg" alt="Universal Music Group logo">
+        <img class="maml-logo" src="assets/maml-logo.png" alt="Music &amp; Advanced Machine Learning Lab logo">
+      </div>
       <div class="paper-links">
-        <span class="paper-link paper-link-placeholder">Paper link (TBD)</span>
+        <a class="paper-link" href="https://arxiv.org/abs/2608.03721" target="_blank" rel="noopener noreferrer">Paper</a>
       </div>
     </div>
     <nav class="page-nav">
@@ -747,7 +802,7 @@
     <div class="section-anchor" id="paper-results"></div>
     <section class="paper-results">
       <h2>Paper Materials</h2>
-      <p class="paper-intro">This section collects the figures and tables currently used in the paper draft. Where figure assets are available, they are previewed directly here; the tables are included as expandable HTML versions so the website stays aligned with the manuscript while remaining easy to browse.</p>
+      <p class="paper-intro">Figures and tables from the manuscript are provided below, with expandable tables for compact browsing.</p>
 
       <div class="paper-subsection">
         <h3>Figures</h3>
@@ -916,8 +971,7 @@
     <div class="section-anchor" id="listening-examples"></div>
     <section class="listening-panel">
       <h2>Comparison of Bandwidth Extension Baselines and Mean-Shift Latent Transports</h2>
-      <p class="listening-intro">These matched examples combine clean, degraded, published baseline, and transport-based outputs so we can compare restoration behavior both by ear and by spectrogram. The original transport cards on this page, <strong>Mean Shift</strong> and <strong>Local Mean</strong>, are computed in the latent space of the <strong>Stable Audio Open VAE</strong>. <strong>Local Mean with Clean Lowband</strong> uses the same local-mean restoration, except that content below the 4\,kHz cutoff is replaced by the original clean signal.</p>
-      <p class="listening-intro">Each example now also includes audio-only saved-transport renders for <strong>CodiCodec</strong>, <strong>DAC</strong>, and <strong>Encodec</strong> using the <strong>MTD 4 kHz</strong> transport vectors. Those added codec cards reuse the same degraded and clean excerpts but do not yet have dedicated spectrogram images embedded in the page.</p>
+      <p class="listening-intro">These matched examples combine clean, degraded, published baseline, and transport-based outputs for comparison by ear and by spectrogram. The transport outputs labeled <strong>Mean Shift</strong> and <strong>Local Mean</strong> are computed in the latent space of the <strong>Stable Audio Open VAE</strong>. <strong>Local Mean with Clean Lowband</strong> uses the same local-mean restoration, except that content below the 4 kHz cutoff is replaced by the original clean signal.</p>
       <p class="listening-note"><strong>Audio example source.</strong> The listening examples on this page are taken from the <a href="https://research.nvidia.com/labs/adlr/A2SB/" target="_blank" rel="noopener noreferrer">A2SB demo website</a>.</p>
       <section class="summary-panel">
         <div class="summary-header">
