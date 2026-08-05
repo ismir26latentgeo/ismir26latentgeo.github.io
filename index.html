@@ -35,6 +35,50 @@
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+    .paper-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 960px;
+    }
+    .paper-meta p {
+      margin: 0;
+    }
+    .authors {
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .equal-contribution {
+      font-size: 0.92rem;
+    }
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .paper-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(50, 92, 115, 0.18);
+      background: rgba(255, 253, 248, 0.72);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    a.paper-link:hover {
+      background: rgba(50, 92, 115, 0.08);
+    }
+    .paper-link-placeholder {
+      color: var(--muted);
+      cursor: default;
+    }
     .intro {
       margin: 0 0 28px;
       color: var(--muted);
@@ -656,10 +700,18 @@
 <body>
   <div class="wrap">
     <h1>On the Geometry of Music Bandwidth Extension in Latent Spaces of Audio Codecs</h1>
+    <div class="paper-meta">
+      <p class="authors">Hendrik Vincent Koops* &middot; Hao Hao Tan* &middot; Elio Quinton</p>
+      <p>Music &amp; Audio Machine Learning Lab, Universal Music Group, London, U.K.</p>
+      <p class="equal-contribution">* Equal contribution</p>
+      <div class="paper-links">
+        <span class="paper-link paper-link-placeholder">Paper link (TBD)</span>
+      </div>
+    </div>
     <p class="intro">This page starts with the matched listening examples for quick qualitative comparison, then adds a compact paper-results appendix with the draft figures and tables further down for quantitative context.</p>
     <section class="abstract-panel">
       <h2>Abstract</h2>
-      <p>Recent audio restoration increasingly relies on large-scale conditional latent generative modeling, including diffusion, Schr&ouml;dinger Bridges, and Flow Matching variants, to invert degradations such as bandwidth limitation or noise. We present an analysis of the performance of various state of the art methods compared to simple arithmetic transformations in the latent space of multiple neural codecs for musical bandwidth extension. We show that estimating a single transport vector between the clean and degraded latent centroids on a reference set, and adding it to degraded latents, can yield restoration performance competitive with large diffusion models. This suggests, first, that some neural codec latent spaces exhibit structure aligned with audio bandwidth; and second, that in such cases complex conditional models may offer only limited gains over a simple vector addition. We argue that these findings reveal an interesting avenue for future research whereby models could take advantage of the latent space structure in order offer greater training and parameter efficiency, and overall better performance. Additionally, we propose to consider this simple arithmetic transformation as a baseline for music bandwidth extension research, as it allows an assessment of the contribution of learnable parameters towards restoration performance.</p>
+      <p>Recent audio restoration increasingly relies on large-scale conditional latent generative modeling, including diffusion, Schr&ouml;dinger Bridges, and Flow Matching variants, to invert degradations such as bandwidth limitation or noise. We present an analysis of the performance of various state-of-the-art methods compared to simple arithmetic transformations in the latent spaces of multiple neural codecs for musical bandwidth extension. We show that estimating a single transport vector between the clean and degraded latent centroids on a reference set, and adding it to degraded latents, can yield restoration performance competitive with large diffusion models. This suggests, first, that some neural codec latent spaces exhibit structure aligned with audio bandwidth; and second, that in such cases complex conditional models may offer only limited gains over a simple vector addition. We argue that these findings reveal an interesting avenue for future research whereby models could take advantage of the latent space structure in order to offer greater training and parameter efficiency, and overall better performance. Additionally, we propose to consider this simple arithmetic transformation as a baseline for music bandwidth extension research, as it allows an assessment of the contribution of learnable parameters towards restoration performance.</p>
     </section>
     <nav class="page-nav">
       <a href="#paper-results">Paper results</a>
